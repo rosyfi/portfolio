@@ -1,0 +1,26 @@
+.windowBar {
+  border: solid;
+  border-radius: 10px;
+  border-end-start-radius: 0px;
+  border-end-end-radius: 0px;
+  padding-block: 12px;
+  padding-inline: 10px;
+
+  background-color: rgb(254, 250, 224);
+}
+
+.windowContent {
+  border: solid;
+  border-top: none;
+
+  height: 100%;
+  background-image: url("/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: rgb(204, 213, 174);
+}
+
+.windowLink {
+  font-weight: 600;
+}

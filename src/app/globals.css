@@ -23,7 +23,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  background: rgb(var(--background-rgb)) !important;
   font-family: var(--font-body);
 }
 

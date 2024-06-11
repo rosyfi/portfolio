@@ -1,12 +1,11 @@
-.content {
+.container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
   border: solid;
   border-radius: 15px;
-  padding-right: 25px;
-  padding-left: 25px;
+  padding-inline: 25px;
 
   background-color: rgb(254, 250, 224);
 }

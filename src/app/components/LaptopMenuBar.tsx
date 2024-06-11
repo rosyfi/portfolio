@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "./LaptopMenuBar.module.css";
-
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const LaptopMenuBar = () => {
@@ -30,16 +29,16 @@ const LaptopMenuBar = () => {
   };
 
   return (
-    <header className={styles.content}>
+    <div className={`container-fluid ${styles.container}`}>
       <i className={`bi bi-battery-full ${styles.icon}`}></i>
       <i className={`bi bi-wifi ${styles.icon}`}></i>
-      <p className={styles.date}>
+      <span className={styles.date}>
         {time.toLocaleDateString("en-US", dateOptions).replace(",", "")}
-      </p>
-      <p className={styles.time}>
+      </span>
+      <span className={styles.time}>
         {time.toLocaleTimeString("de-DE", timeOptions)}
-      </p>
-    </header>
+      </span>
+    </div>
   );
 };
 

@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Overpass_Mono } from "next/font/google";
+
+import "bootstrap/dist/css/bootstrap.css";
+
 import "./globals.css";
 
 const overpass_mono = Overpass_Mono({ subsets: ["latin"] });

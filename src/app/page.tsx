@@ -1,11 +1,13 @@
 import styles from "./page.module.css";
 
 import LaptopMenuBar from "./components/LaptopMenuBar";
+import Window from "./components/Window";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className={styles.main}>
       <LaptopMenuBar />
+      <Window />
     </main>
   );
 }
