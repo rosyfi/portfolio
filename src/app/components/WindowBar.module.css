@@ -1,0 +1,14 @@
+.windowBarContainer {
+  border: solid;
+  border-radius: 10px;
+  border-end-start-radius: 0px;
+  border-end-end-radius: 0px;
+  padding-block: 12px;
+  padding-inline: 10px;
+
+  background-color: rgb(254, 250, 224);
+}
+
+.windowBarLink {
+  font-weight: 600;
+}

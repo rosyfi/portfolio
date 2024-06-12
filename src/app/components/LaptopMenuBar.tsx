@@ -29,9 +29,9 @@ const LaptopMenuBar = () => {
   };
 
   return (
-    <div className={`container-fluid ${styles.container}`}>
-      <i className={`bi bi-battery-full ${styles.icon}`}></i>
-      <i className={`bi bi-wifi ${styles.icon}`}></i>
+    <div className={`container-fluid ${styles.laptopMenuContainer}`}>
+      <i className={`bi bi-battery-full ${styles.laptopMenuIcon}`}></i>
+      <i className={`bi bi-wifi ${styles.laptopMenuIcon}`}></i>
       <span className={styles.date}>
         {time.toLocaleDateString("en-US", dateOptions).replace(",", "")}
       </span>
