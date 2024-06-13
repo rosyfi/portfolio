@@ -1,0 +1,15 @@
+.message {
+  border: solid;
+  border-radius: 15px;
+  background-color: rgb(233, 237, 201);
+  padding: 10px;
+  width: fit-content;
+}
+
+.spanBold {
+  font-weight: bolder;
+}
+
+.image {
+  width: 200px;
+}
