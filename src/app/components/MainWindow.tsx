@@ -3,20 +3,36 @@ import MenuBar from "./MenuBar";
 import Content from "./Content";
 
 interface MainWindowProps {
-  updatePath: (newPath: string) => void;
+  onPathChange: (path: string) => void;
 }
 
-const MainWindow: React.FC<MainWindowProps> = ({ updatePath }) => {
-  const [currentContent, setCurrentContent] = useState("content1");
+const MainWindow: React.FC<MainWindowProps> = ({ onPathChange }) => {
+  const [currentContent, setCurrentContent] = useState(1);
 
-  const updateContent = (newContent: string) => {
+  const handleMenuItemClick = (newContent: number, newPath: string) => {
     setCurrentContent(newContent);
+    onPathChange(newPath);
+  };
+
+  const renderContent = () => {
+    switch (currentContent) {
+      case 1:
+        return <Content />;
+      case 2:
+        return <div>Content 2</div>;
+      case 3:
+        return <div>Content 3</div>;
+      case 4:
+        return <div>Content 4</div>;
+      default:
+        break;
+    }
   };
 
   return (
     <div>
-      <MenuBar updatePath={updatePath} updateContent={updateContent} />
-      <Content currentContent={currentContent} />
+      <MenuBar onMenuItemClick={handleMenuItemClick} />
+      {renderContent()}
     </div>
   );
 };

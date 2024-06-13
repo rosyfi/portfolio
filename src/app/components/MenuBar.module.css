@@ -11,6 +11,8 @@
   border-radius: 15px;
   background-color: rgb(233, 237, 201);
   padding-inline: 20px;
+
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.2);
 }
 
 .menuItem:hover {

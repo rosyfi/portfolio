@@ -3,10 +3,10 @@ import React from "react";
 import styles from "./WindowBar.module.css";
 
 interface WindowBarProps {
-  currentPath: string;
+  path: string;
 }
 
-const WindowBar: React.FC<WindowBarProps> = ({ currentPath }) => {
+const WindowBar: React.FC<WindowBarProps> = ({ path }) => {
   return (
     <div className={`container-fluid ${styles.windowBarContainer}`}>
       <div className="row">
@@ -18,7 +18,7 @@ const WindowBar: React.FC<WindowBarProps> = ({ currentPath }) => {
           />
         </div>
         <div className="col text-center">
-          <span className={styles.windowBarLink}>{currentPath}</span>
+          <span className={styles.windowBarLink}>{path}</span>
         </div>
         <div className="col"></div>
       </div>

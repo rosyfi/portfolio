@@ -3,11 +3,10 @@ import React from "react";
 import styles from "./MenuBar.module.css";
 
 interface MenuBarProps {
-  updatePath: (newPath: string) => void;
-  updateContent: (newContent: string) => void;
+  onMenuItemClick: (content: number, path: string) => void;
 }
 
-const MenuBar: React.FC<MenuBarProps> = ({ updatePath, updateContent }) => {
+const MenuBar: React.FC<MenuBarProps> = ({ onMenuItemClick }) => {
   return (
     <div className={`container ${styles.menuItemsContainer}`}>
       <div className={styles.menuItems}>
@@ -15,8 +14,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ updatePath, updateContent }) => {
           type="button"
           className={styles.menuItemButton}
           onClick={() => {
-            updateContent("content1");
-            updatePath("rossellafilocomo/about");
+            onMenuItemClick(1, "rossellafilocomo/about");
           }}
         >
           <span className={styles.menuItem}>About</span>
@@ -25,8 +23,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ updatePath, updateContent }) => {
           type="button"
           className={styles.menuItemButton}
           onClick={() => {
-            updateContent("content2");
-            updatePath("rossellafilocomo/education");
+            onMenuItemClick(2, "rossellafilocomo/education");
           }}
         >
           <span className={styles.menuItem}>Education</span>
@@ -35,8 +32,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ updatePath, updateContent }) => {
           type="button"
           className={styles.menuItemButton}
           onClick={() => {
-            updateContent("content3");
-            updatePath("rossellafilocomo/experience");
+            onMenuItemClick(3, "rossellafilocomo/experience");
           }}
         >
           <span className={styles.menuItem}>Experience</span>
@@ -45,8 +41,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ updatePath, updateContent }) => {
           type="button"
           className={styles.menuItemButton}
           onClick={() => {
-            updateContent("content4");
-            updatePath("rossellafilocomo/skills");
+            onMenuItemClick(4, "rossellafilocomo/skills");
           }}
         >
           <span className={styles.menuItem}>Skills</span>
