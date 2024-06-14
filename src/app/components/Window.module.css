@@ -1,3 +1,8 @@
+.windowContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 .windowContent {
   border: solid;
   border-top: none;

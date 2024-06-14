@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./ChatContent.module.css";
 
-// Open email with text that was inputed in the input field,
-// if there is no text, then just open email
-const handleClick = () => {
-  console.log("HI there");
-};
+const ChatContent: React.FC = () => {
+  const [emailBody, setEmailBody] = useState<string>("");
 
-const ChatContent = () => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmailBody(e.target.value);
+  };
+
+  const openEmail = () => {
+    const recipient = "filocomo.rossella@gmail.com";
+    const subject = "Joyn us!";
+    const body = encodeURIComponent(emailBody);
+
+    const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(
+      subject
+    )}&body=${body}`;
+
+    window.open(mailtoUrl);
+  };
+
   return (
     <div className={`container ${styles.container}`}>
       <div className={styles.imageContainer}>
@@ -37,8 +49,14 @@ const ChatContent = () => {
           </div>
         </div>
         <div className={styles.inputContainer}>
-          <input className={styles.input} type="email" />
-          <button className={styles.enterButton} onClick={handleClick}>
+          <input
+            className={styles.input}
+            type="text"
+            value={emailBody}
+            onChange={handleInputChange}
+            placeholder="Write me your message.."
+          />
+          <button className={styles.enterButton} onClick={openEmail}>
             <img
               src="/enterButton.svg"
               alt="enter button"

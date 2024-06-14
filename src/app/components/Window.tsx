@@ -10,7 +10,7 @@ interface WindowProps {
 
 const Window: React.FC<WindowProps> = ({ path, children }) => {
   return (
-    <div className="container-fluid">
+    <div className={styles.windowContainer}>
       <WindowBar path={path} />
       <div className={styles.windowContent}>{children}</div>
     </div>
