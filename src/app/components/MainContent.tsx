@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import MenuBar from "./MenuBar";
-import Content from "./Content";
+import About from "./content/About";
+import styles from "./MainContent.module.css";
 
-interface MainWindowProps {
+interface MainContentProps {
   onPathChange: (path: string) => void;
 }
 
-const MainWindow: React.FC<MainWindowProps> = ({ onPathChange }) => {
+const MainContent: React.FC<MainContentProps> = ({ onPathChange }) => {
   const [currentContent, setCurrentContent] = useState<number>(1);
 
   const handleMenuItemClick = (newContent: number, newPath: string) => {
@@ -17,7 +18,7 @@ const MainWindow: React.FC<MainWindowProps> = ({ onPathChange }) => {
   const renderContent = () => {
     switch (currentContent) {
       case 1:
-        return <Content />;
+        return <About />;
       case 2:
         return <div>Content 2</div>;
       case 3:
@@ -30,11 +31,11 @@ const MainWindow: React.FC<MainWindowProps> = ({ onPathChange }) => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <MenuBar onMenuItemClick={handleMenuItemClick} />
       {renderContent()}
     </div>
   );
 };
 
-export default MainWindow;
+export default MainContent;

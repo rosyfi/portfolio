@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 
 import LaptopMenuBar from "./components/LaptopMenuBar";
 import Window from "./components/Window";
-import MainWindow from "./components/MainWindow";
+import MainContent from "./components/MainContent";
 import ChatContent from "./components/ChatContent";
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
           <ChatContent />
         </Window>
         <Window path={path}>
-          <MainWindow onPathChange={setPath} />
+          <MainContent onPathChange={setPath} />
         </Window>
       </div>
     </main>
