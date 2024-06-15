@@ -6,6 +6,8 @@
 .windowContent {
   border: solid;
   border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 
   height: 100%;
   background-image: url("/background.svg");

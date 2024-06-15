@@ -1,8 +1,8 @@
 .windowBarContainer {
   border: solid;
   border-radius: 10px;
-  border-end-start-radius: 0px;
-  border-end-end-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
   padding-block: 12px;
   padding-inline: 10px;
 

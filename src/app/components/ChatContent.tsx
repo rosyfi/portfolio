@@ -5,6 +5,7 @@ import styles from "./ChatContent.module.css";
 const ChatContent: React.FC = () => {
   const [emailBody, setEmailBody] = useState<string>("");
 
+  // add later: on enter open email window
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmailBody(e.target.value);
   };

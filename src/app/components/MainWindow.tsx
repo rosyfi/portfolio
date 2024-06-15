@@ -7,7 +7,7 @@ interface MainWindowProps {
 }
 
 const MainWindow: React.FC<MainWindowProps> = ({ onPathChange }) => {
-  const [currentContent, setCurrentContent] = useState(1);
+  const [currentContent, setCurrentContent] = useState<number>(1);
 
   const handleMenuItemClick = (newContent: number, newPath: string) => {
     setCurrentContent(newContent);

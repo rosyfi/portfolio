@@ -9,7 +9,7 @@ interface WindowBarProps {
 const WindowBar: React.FC<WindowBarProps> = ({ path }) => {
   return (
     <div className={`container-fluid ${styles.windowBarContainer}`}>
-      <div className="row">
+      <div className="row flex-nowrap">
         <div className="col">
           <img
             src="/windowBarButtons.svg"
