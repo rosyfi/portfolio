@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MenuBar from "./MenuBar";
 import About from "./content/About";
 import styles from "./MainContent.module.css";
+import Education from "./content/Education";
 
 interface MainContentProps {
   onPathChange: (path: string) => void;
@@ -20,7 +21,7 @@ const MainContent: React.FC<MainContentProps> = ({ onPathChange }) => {
       case 1:
         return <About />;
       case 2:
-        return <div>Content 2</div>;
+        return <Education />;
       case 3:
         return <div>Content 3</div>;
       case 4:

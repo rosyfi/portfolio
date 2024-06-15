@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./About.module.css";
+import styles from "./styles/About.module.css";
 
 const About = ({}) => {
   return (
     <div className={`container ${styles.container}`}>
-      <h1>Welcome!</h1>
+      <h1>Welcome! </h1>
       <div className={styles.paragraph}>
         <p>
           Hi there! I am a passionate
@@ -24,8 +24,7 @@ const About = ({}) => {
           understand the entire system more deeply, I also completed a
           traineeship to deepen my knowledge of backend technologies. Now, I
           blend my skills to create seamless and
-          <span className={styles.span}> dynamic web applications</span>. Have
-          fun browsing through my site! :)
+          <span className={styles.span}> dynamic web applications</span>
         </p>
         <p>Have fun browsing through my site! :)</p>
       </div>
