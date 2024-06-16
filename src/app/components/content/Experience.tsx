@@ -131,9 +131,102 @@ const Experience = () => {
         </div>
       </div>
       <div className={styles.timeLineContainer}>
-        {Array.from({ length: 120 }).map((_) => (
+        {Array.from({ length: 8 }).map((_) => (
           <div className={styles.timeLine}></div>
         ))}
+        <div className={styles.test2}>
+          <div className={styles.test3} />
+          <div className={styles.month}>Apr</div>
+          <div className={styles.test} />
+        </div>
+        <div className={styles.month}>Mar</div>
+        <div className={styles.month}>Feb</div>
+        <div className={styles.month}>Jan</div>
+        <h1 className={styles.year}>2024</h1>
+        <div className={styles.month}>Dez</div>
+        <div className={styles.month}>Nov</div>
+        <div className={styles.test2}>
+          <div className={styles.test3} />
+          <div className={styles.month}>Oct</div>
+          <div className={styles.test} />
+        </div>
+        <div className={styles.month}>Sep</div>
+        <div className={styles.month}>Aug</div>
+        <div className={styles.month}>Jul</div>
+        <div className={styles.month}>Jun</div>
+        <div className={styles.month}>Mai</div>
+        <div className={styles.month}>Apr</div>
+        <div className={styles.month}>Mar</div>
+        <div className={styles.month}>Feb</div>
+        <div className={styles.month}>Jan</div>
+        <h1 className={styles.year}>2023</h1>
+        <div className={styles.month}>Dez</div>
+        <div className={styles.month}>Nov</div>
+        <div className={styles.month}>Oct</div>
+        <div className={styles.month}>Sep</div>
+        <div className={styles.month}>Aug</div>
+        <div className={styles.month}>Jul</div>
+        <div className={styles.month}>Jun</div>
+        <div className={styles.month}>Mai</div>
+        <div className={styles.month}>Apr</div>
+        <div className={styles.month}>Mar</div>
+        <div className={styles.month}>Feb</div>
+        <div className={styles.month}>Jan</div>
+        <h1 className={styles.year}>2022</h1>
+        <div className={styles.month}>Dez</div>
+        <div className={styles.month}>Nov</div>
+        <div className={styles.month}>Oct</div>
+        <div className={styles.month}>Sep</div>
+        {Array.from({ length: 8 }).map((_) => (
+          <div className={styles.timeLine}></div>
+        ))}
+        <h1 className={styles.year}>2021</h1>
+        {Array.from({ length: 10 }).map((_) => (
+          <div className={styles.timeLine}></div>
+        ))}
+        <div className={styles.month}>Feb</div>
+        <div className={styles.month}>Jan</div>
+        <h1 className={styles.year}>2020</h1>
+        <div className={styles.month}>Dez</div>
+        <div className={styles.month}>Nov</div>
+        <div className={styles.month}>Oct</div>
+        <div className={styles.month}>Sep</div>
+        {Array.from({ length: 8 }).map((_) => (
+          <div className={styles.timeLine}></div>
+        ))}
+        <h1 className={styles.year}>2019</h1>
+        {Array.from({ length: 6 }).map((_) => (
+          <div className={styles.timeLine}></div>
+        ))}
+        <div className={styles.month}>Jun</div>
+        <div className={styles.month}>Mai</div>
+        <div className={styles.month}>Apr</div>
+        <div className={styles.month}>Mar</div>
+        <div className={styles.month}>Feb</div>
+        <div className={styles.month}>Jan</div>
+        <h1 className={styles.year}>2018</h1>
+        {Array.from({ length: 1 }).map((_) => (
+          <div className={styles.timeLine}></div>
+        ))}
+        <div className={styles.month}>Nov</div>
+        <div className={styles.month}>Oct</div>
+        <div className={styles.month}>Sep</div>
+        <div className={styles.month}>Aug</div>
+        <div className={styles.month}>Jul</div>
+        <div className={styles.month}>Jun</div>
+        {Array.from({ length: 5 }).map((_) => (
+          <div className={styles.timeLine}></div>
+        ))}
+        <h1 className={styles.year}>2017</h1>
+        {Array.from({ length: 11 }).map((_) => (
+          <div className={styles.timeLine}></div>
+        ))}
+        <div className={styles.month}>Jan</div>
+        <h1 className={styles.year}>2016</h1>
+        {Array.from({ length: 12 }).map((_) => (
+          <div className={styles.timeLine}></div>
+        ))}
+        <h1 className={styles.year}>2015</h1>
       </div>
       <div className="jobContainerRight">
         <div className={styles.jobCard}>

@@ -6,6 +6,8 @@ interface MenuBarProps {
   onMenuItemClick: (content: number, path: string) => void;
 }
 
+//when menuItem was clicked stay on hover modus
+
 const MenuBar: React.FC<MenuBarProps> = ({ onMenuItemClick }) => {
   return (
     <div className={`container ${styles.menuItemsContainer}`}>
