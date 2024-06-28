@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+}
+
+.progressBarContainer {
+  background-color: rgb(233, 237, 201);
+  border-radius: 15px;
+  height: 25px;
+}
+
+.progress {
+  background-color: rgb(96, 108, 56);
+  border-radius: 15px;
+  height: 25px;
+  width: 70%;
+}

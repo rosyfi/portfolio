@@ -3,6 +3,7 @@ import MenuBar from "./MenuBar";
 import About from "./content/About";
 import styles from "./styles/MainContent.module.css";
 import Education from "./content/Education";
+import HardSkill from "./content/HardSkill";
 import Experience from "./content/Experience";
 
 interface MainContentProps {
@@ -26,7 +27,7 @@ const MainContent: React.FC<MainContentProps> = ({ onPathChange }) => {
       case 3:
         return <Experience />;
       case 4:
-        return <div>Content 4</div>;
+        return <HardSkill />;
       case 5:
         return <div>Content 5!!!!!!!!</div>;
       case 6:
