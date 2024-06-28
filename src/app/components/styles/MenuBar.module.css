@@ -4,7 +4,6 @@
 
 .menuItems {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
 
   height: 60px;
@@ -13,6 +12,7 @@
   padding-inline: 20px;
 
   box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .menuItem:hover {
@@ -24,4 +24,9 @@
 .menuItemButton {
   background: none;
   border: none;
+  flex: 1;
+}
+
+.dropdownMenu {
+  position: relative;
 }

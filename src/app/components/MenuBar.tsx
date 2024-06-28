@@ -1,6 +1,7 @@
 import React from "react";
 
-import styles from "./MenuBar.module.css";
+import styles from "./styles/MenuBar.module.css";
+import SkillsDropdown from "./SkillsDropdown";
 
 interface MenuBarProps {
   onMenuItemClick: (content: number, path: string) => void;
@@ -39,15 +40,9 @@ const MenuBar: React.FC<MenuBarProps> = ({ onMenuItemClick }) => {
         >
           <span className={styles.menuItem}>Experience</span>
         </button>
-        <button
-          type="button"
-          className={styles.menuItemButton}
-          onClick={() => {
-            onMenuItemClick(4, "rossellafilocomo/skills");
-          }}
-        >
-          <span className={styles.menuItem}>Skills</span>
-        </button>
+        <div className={styles.menuItemButton}>
+          <SkillsDropdown onMenuItemClick={onMenuItemClick} />
+        </div>
       </div>
     </div>
   );

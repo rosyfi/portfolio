@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./WindowBar.module.css";
+import styles from "./styles/WindowBar.module.css";
 
 interface WindowBarProps {
   path: string;

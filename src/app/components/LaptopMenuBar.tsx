@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import styles from "./LaptopMenuBar.module.css";
+import styles from "./styles/LaptopMenuBar.module.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 const LaptopMenuBar = () => {

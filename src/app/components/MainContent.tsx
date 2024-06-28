@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MenuBar from "./MenuBar";
 import About from "./content/About";
-import styles from "./MainContent.module.css";
+import styles from "./styles/MainContent.module.css";
 import Education from "./content/Education";
 import Experience from "./content/Experience";
 
@@ -27,6 +27,10 @@ const MainContent: React.FC<MainContentProps> = ({ onPathChange }) => {
         return <Experience />;
       case 4:
         return <div>Content 4</div>;
+      case 5:
+        return <div>Content 5!!!!!!!!</div>;
+      case 6:
+        return <div>Content 6???????</div>;
       default:
         break;
     }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import styles from "./ChatContent.module.css";
+import styles from "./styles/ChatContent.module.css";
 
 const ChatContent: React.FC = () => {
   const [emailBody, setEmailBody] = useState<string>("");
