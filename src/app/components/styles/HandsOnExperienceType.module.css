@@ -59,8 +59,7 @@
 }
 
 .keyTakeawayContainer p {
-  margin-bottom: 0.3rem;
-  font-weight: bold;
+  font-weight: bolder;
   color: rgb(96, 108, 56);
 }
 
@@ -73,10 +72,14 @@
 }
 
 .test li {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .container p {
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
+}
+
+.noMargin {
+  margin: 0;
 }

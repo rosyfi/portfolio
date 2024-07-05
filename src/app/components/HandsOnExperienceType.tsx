@@ -49,8 +49,8 @@ const HandsOnExperienceType: React.FC<HandsOnExperienceTypeProps> = ({
 
         <div className={styles.test3}>
           <div className={styles.keyTakeawayContainer}>
-            <h4>Key Takeaway:</h4>
-            <p>{keyTakeaway}</p>
+            <h4 className={styles.noMargin}>Key Takeaway:</h4>
+            <p className={styles.noMargin}>{keyTakeaway}</p>
           </div>
           <div className={styles.placeContainer}>
             <img

@@ -3,17 +3,35 @@ import styles from "./styles/SoftSkill.module.css";
 import HandsOnExpereinceCard from "../HandsOnExperienceCard";
 import SoftSkillCard from "../SoftSkillCard";
 
+import softSkills from "./data/SoftSkill";
+
 const SoftSkill = () => {
   return (
-    <div className={`container col-11 ${styles.container}`}>
-      <SoftSkillCard
-        title={"Teamworking"}
-        description={
-          "I work well in team settings, using my communication and collaboration skills to create a positive and productive environment. While I enjoy working independently as a software developer, I also like working with others to achieve shared goals, exchange ideas, and find the best solutions. Known for my reliability, I actively engage with my colleagues."
-        }
-      ></SoftSkillCard>
-      <HandsOnExpereinceCard></HandsOnExpereinceCard>
-    </div>
+    <>
+      {Object.keys(softSkills).map((key: string, index: number) => (
+        <div className={`container col-11 ${styles.container}`} key={key}>
+          <React.Fragment>
+            {index % 2 === 0 ? (
+              <React.Fragment>
+                <SoftSkillCard
+                  title={softSkills[key].title}
+                  description={softSkills[key].description}
+                />
+                <HandsOnExpereinceCard skills={softSkills[key].specifics} />
+              </React.Fragment>
+            ) : (
+              <React.Fragment>
+                <HandsOnExpereinceCard skills={softSkills[key].specifics} />
+                <SoftSkillCard
+                  title={softSkills[key].title}
+                  description={softSkills[key].description}
+                />
+              </React.Fragment>
+            )}
+          </React.Fragment>
+        </div>
+      ))}
+    </>
   );
 };
 

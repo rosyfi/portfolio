@@ -2,47 +2,18 @@ import React, { useState } from "react";
 import styles from "./styles/HandsOnExperienceCard.module.css";
 import HandsOnExperienceType from "./HandsOnExperienceType";
 
-const SoftSkillCard = () => {
-  const [type, setType] = useState<number | null>(null);
+interface SoftSkillsProps {
+  skills: {
+    tasks: Array<string>;
+    impression: string;
+    keyTakeaway: string;
+    svg: string;
+    place: string;
+  }[];
+}
 
-  const components = [
-    {
-      tasks: [
-        "Coming up with a website idea",
-        "Implementing the website",
-        "Clarifying team roles",
-        "Conducting meetings",
-      ],
-      impression:
-        "It turned out to be the worst team experience ever due to the team's unreliability.",
-      keyTakeaway: "Accountability",
-      svg: "university",
-      place: "University",
-    },
-    {
-      tasks: [
-        "Gaining insights into typical roles of a software project",
-        "Analyzing sustainable markets in insurances",
-        "Generating a mobile web application idea, implementing it, and conducting testing",
-      ],
-      impression:
-        "It was the ultimate team synergy! Our diverse group, comprising both programmers and business analysts, created the best collaborative experience ever. Everyone benefited from each other's expertise, fostering a culture of mutual learning and growth.",
-      keyTakeaway: "Kindness",
-      svg: "internship",
-      place: "Internship",
-    },
-    {
-      tasks: [
-        "Gaining insights into first client project",
-        "Understanding clients business and needs",
-      ],
-      impression:
-        "Harmonious teamwork facilitates the exchange of valuable insights, allowing members to learn from professionals. In such environments, juniors glean knowledge and wisdom from their more experienced colleagues.",
-      keyTakeaway: "Curiosity",
-      svg: "work",
-      place: "Work",
-    },
-  ];
+const SoftSkillCard: React.FC<SoftSkillsProps> = ({ skills }) => {
+  const [type, setType] = useState<number | null>(null);
 
   const handleButtonClick = (index: number) => {
     setType(index);
@@ -55,7 +26,7 @@ const SoftSkillCard = () => {
   };
 
   const handleNext = () => {
-    if (type !== null && type < components.length - 1) {
+    if (type !== null && type < skills.length - 1) {
       setType(type + 1);
     }
   };
@@ -99,15 +70,15 @@ const SoftSkillCard = () => {
         </>
       ) : (
         <HandsOnExperienceType
-          tasks={components[type].tasks}
-          impression={components[type].impression}
-          keyTakeaway={components[type].keyTakeaway}
+          tasks={skills[type].tasks}
+          impression={skills[type].impression}
+          keyTakeaway={skills[type].keyTakeaway}
           onPrevious={handlePrevious}
           onNext={handleNext}
           disablePrevious={type === 0}
-          disableNext={type === components.length - 1}
-          svg={components[type].svg}
-          place={components[type].place}
+          disableNext={type === skills.length - 1}
+          svg={skills[type].svg}
+          place={skills[type].place}
         />
       )}
     </div>
