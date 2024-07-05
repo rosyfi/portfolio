@@ -59,9 +59,9 @@ const softSkills: SoftSkills = {
     ],
   },
   communication: {
-    title: "TeamWork",
+    title: "Communication",
     description:
-      "I work well in team settings, using my communication and collaboration skills to create a positive and productive environment. While I enjoy working independently as a software developer, I also like working with others to achieve shared goals, exchange ideas, and find the best solutions. Known for my reliability, I actively engage with my colleagues.",
+      "I excel in communication, employing active listening and a persistent curiosity. I'm not afraid to ask questions, even multiple times, to ensure thorough understanding. While this may seem annoying to some, I see it as essential for clarity and effective collaboration.",
     specifics: [
       {
         tasks: ["Taking notes during lectures"],
@@ -94,9 +94,9 @@ const softSkills: SoftSkills = {
     ],
   },
   timeManagement: {
-    title: "TeamWork",
+    title: "Time Management ",
     description:
-      "I work well in team settings, using my communication and collaboration skills to create a positive and productive environment. While I enjoy working independently as a software developer, I also like working with others to achieve shared goals, exchange ideas, and find the best solutions. Known for my reliability, I actively engage with my colleagues.",
+      "I prefer to focus on one task at a time and make sure I finish it before moving on. By organizing my work and staying focused, I get things done efficiently and on time.",
     specifics: [
       {
         tasks: [
@@ -128,9 +128,9 @@ const softSkills: SoftSkills = {
     ],
   },
   decisionMaking: {
-    title: "TeamWork",
+    title: "Decision Making",
     description:
-      "I work well in team settings, using my communication and collaboration skills to create a positive and productive environment. While I enjoy working independently as a software developer, I also like working with others to achieve shared goals, exchange ideas, and find the best solutions. Known for my reliability, I actively engage with my colleagues.",
+      "When I encounter challenges or opportunities, I carefully assess the situation and choose the best option based on the available information.",
     specifics: [
       {
         tasks: ["Deciding on technical tools to work with"],
@@ -151,10 +151,17 @@ const softSkills: SoftSkills = {
     ],
   },
   creativity: {
-    title: "TeamWork",
+    title: "Creativity",
     description:
-      "I work well in team settings, using my communication and collaboration skills to create a positive and productive environment. While I enjoy working independently as a software developer, I also like working with others to achieve shared goals, exchange ideas, and find the best solutions. Known for my reliability, I actively engage with my colleagues.",
+      "I look at problems in new ways, always trying to find different and creative solutions. Whether it's designing interfaces, brainstorming new features, or optimizing workflows, I rely on my creative approach to deliver the best results.",
     specifics: [
+      {
+        tasks: [],
+        impression: "",
+        keyTakeaway: "",
+        svg: "",
+        place: "",
+      },
       {
         tasks: ["Applying Design Thinking Methods"],
         impression:
