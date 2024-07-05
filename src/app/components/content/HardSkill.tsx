@@ -6,7 +6,7 @@ import HardSkillProgressBar from "../HardSkillProgressBar";
 
 const HardSkill = () => {
   return (
-    <div className={`container col-10 ${styles.container}`}>
+    <div className={`container ${styles.container}`}>
       <div className={styles.hardSkill}>
         <HardSkillProgressBar title={"Software Development"} percentage={60} />
         <div className={styles.hardSkillCards}>
