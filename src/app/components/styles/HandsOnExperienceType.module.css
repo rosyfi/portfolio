@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.test {
+  display: flex;
+  gap: 25px;
+}
+
+.test2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.test3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasksContainer {
+  flex: 1;
+}
+
+.impressionContainer {
+  flex: 1;
+}
+
+.keyTakeawayContainer {
+  display: flex;
+  align-items: flex-end;
+}
+
+.placeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.placeSymbol {
+  width: 70px;
+}
+
+.container button {
+  background: none;
+  border: none;
+}
+
+.container button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.keyTakeawayContainer h4 {
+  font-style: italic;
+  color: rgb(96, 108, 56);
+  font-weight: lighter;
+}
+
+.keyTakeawayContainer p {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: rgb(96, 108, 56);
+}
+
+.impressionContainer p {
+  hyphens: auto;
+}
+
+.test h2 {
+  text-align: center;
+}
+
+.test li {
+  font-size: 24px;
+}
+
+.container p {
+  font-size: 24px;
+  text-align: center;
+}

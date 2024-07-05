@@ -4,6 +4,7 @@ import About from "./content/About";
 import styles from "./styles/MainContent.module.css";
 import Education from "./content/Education";
 import HardSkill from "./content/HardSkill";
+import SoftSkill from "./content/SoftSkill";
 import Experience from "./content/Experience";
 
 interface MainContentProps {
@@ -29,7 +30,7 @@ const MainContent: React.FC<MainContentProps> = ({ onPathChange }) => {
       case 4:
         return <HardSkill />;
       case 5:
-        return <div>Content 5!!!!!!!!</div>;
+        return <SoftSkill />;
       case 6:
         return <div>Content 6???????</div>;
       default:
