@@ -3,8 +3,20 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: inherit;
+
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 700px;
+  padding-inline: 50px;
+  scrollbar-color: rgb(96, 108, 56, 0.7) transparent;
 }
 
 .container p {
   font-size: 18px;
+}
+
+.softSkillContainer {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }

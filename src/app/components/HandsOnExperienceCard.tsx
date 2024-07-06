@@ -35,37 +35,43 @@ const SoftSkillCard: React.FC<SoftSkillsProps> = ({ skills }) => {
     <div className={styles.container}>
       {type === null ? (
         <>
-          <h2>Hands-on Experience</h2>
+          <h2>Hands-On Experience</h2>
           <div className={styles.symbolsContainer}>
-            <button
-              className={styles.symbol}
-              onClick={() => handleButtonClick(0)}
-            >
-              <img
-                className={styles.svg}
-                src="/university.svg"
-                alt="unviersity"
-              />
-              <span>Univeristy</span>
-            </button>
-            <button
-              className={styles.symbol}
-              onClick={() => handleButtonClick(1)}
-            >
-              <img
-                className={styles.svg}
-                src="/internship.svg"
-                alt="internship"
-              />
-              <span>Internship</span>
-            </button>
-            <button
-              className={styles.symbol}
-              onClick={() => handleButtonClick(2)}
-            >
-              <img className={styles.svg} src="/work.svg" alt="work" />
-              <span>Work</span>
-            </button>
+            {skills[0]?.tasks?.length > 0 && (
+              <button
+                className={styles.symbol}
+                onClick={() => handleButtonClick(0)}
+              >
+                <img
+                  className={styles.svg}
+                  src="/university.svg"
+                  alt="unviersity"
+                />
+                <span>Univeristy</span>
+              </button>
+            )}
+            {skills[1]?.tasks?.length > 0 && (
+              <button
+                className={styles.symbol}
+                onClick={() => handleButtonClick(1)}
+              >
+                <img
+                  className={styles.svg}
+                  src="/internship.svg"
+                  alt="internship"
+                />
+                <span>Internship</span>
+              </button>
+            )}
+            {skills[2]?.tasks?.length > 0 && (
+              <button
+                className={styles.symbol}
+                onClick={() => handleButtonClick(2)}
+              >
+                <img className={styles.svg} src="/work.svg" alt="work" />
+                <span>Work</span>
+              </button>
+            )}
           </div>
         </>
       ) : (

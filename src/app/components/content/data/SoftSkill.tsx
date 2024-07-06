@@ -16,7 +16,7 @@ interface SoftSkills {
 
 const softSkills: SoftSkills = {
   teamworking: {
-    title: "TeamWork",
+    title: "Teamworking",
     description:
       "I work well in team settings, using my communication and collaboration skills to create a positive and productive environment. While I enjoy working independently as a software developer, I also like working with others to achieve shared goals, exchange ideas, and find the best solutions. Known for my reliability, I actively engage with my colleagues.",
     specifics: [
@@ -155,13 +155,6 @@ const softSkills: SoftSkills = {
     description:
       "I look at problems in new ways, always trying to find different and creative solutions. Whether it's designing interfaces, brainstorming new features, or optimizing workflows, I rely on my creative approach to deliver the best results.",
     specifics: [
-      {
-        tasks: [],
-        impression: "",
-        keyTakeaway: "",
-        svg: "",
-        place: "",
-      },
       {
         tasks: ["Applying Design Thinking Methods"],
         impression:

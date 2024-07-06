@@ -4,17 +4,17 @@
   height: 100%;
 }
 
-.test {
+.topContainer {
   display: flex;
   gap: 25px;
 }
 
-.test2 {
+.contentContainer {
   display: flex;
   flex-direction: column;
 }
 
-.test3 {
+.bottomContainer {
   display: flex;
   justify-content: space-between;
 }
@@ -30,6 +30,7 @@
 .keyTakeawayContainer {
   display: flex;
   align-items: flex-end;
+  gap: 10px;
 }
 
 .placeContainer {
@@ -58,28 +59,48 @@
   font-weight: lighter;
 }
 
-.keyTakeawayContainer p {
+.keyTakeawayContainer span {
   font-weight: bolder;
+  font-size: 24px;
   color: rgb(96, 108, 56);
+  margin-bottom: 0.3rem;
 }
 
 .impressionContainer p {
   hyphens: auto;
 }
 
-.test h2 {
+.topContainer h2 {
   text-align: center;
 }
 
-.test li {
+.topContainer li {
   font-size: 18px;
 }
 
 .container p {
   font-size: 18px;
-  text-align: center;
+  text-align: justify;
 }
 
-.noMargin {
-  margin: 0;
+.topContainer ul.custom-list {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.topContainer .custom-list li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.topContainer ul.custom-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4em;
+  width: 20px;
+  height: 20px;
+  background-image: url("/task.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }

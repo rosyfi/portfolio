@@ -7,9 +7,9 @@ import softSkills from "./data/SoftSkill";
 
 const SoftSkill = () => {
   return (
-    <>
+    <div className={`container ${styles.container}`}>
       {Object.keys(softSkills).map((key: string, index: number) => (
-        <div className={`container col-11 ${styles.container}`} key={key}>
+        <div className={styles.softSkillContainer} key={key}>
           <React.Fragment>
             {index % 2 === 0 ? (
               <React.Fragment>
@@ -20,18 +20,20 @@ const SoftSkill = () => {
                 <HandsOnExpereinceCard skills={softSkills[key].specifics} />
               </React.Fragment>
             ) : (
-              <React.Fragment>
-                <HandsOnExpereinceCard skills={softSkills[key].specifics} />
-                <SoftSkillCard
-                  title={softSkills[key].title}
-                  description={softSkills[key].description}
-                />
-              </React.Fragment>
+              <div className={styles.softSkillContainer} key={key}>
+                <React.Fragment>
+                  <HandsOnExpereinceCard skills={softSkills[key].specifics} />
+                  <SoftSkillCard
+                    title={softSkills[key].title}
+                    description={softSkills[key].description}
+                  />
+                </React.Fragment>
+              </div>
             )}
           </React.Fragment>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
