@@ -1,4 +1,4 @@
-.container {
+.cardContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,9 +12,14 @@
   min-width: 500px;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
 .title {
   font-weight: bold;
-  text-align: cent;
+  text-align: center;
 }
 
 .detail {

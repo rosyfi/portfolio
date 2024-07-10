@@ -6,7 +6,6 @@ import Education from "./content/Education";
 import Experience from "./content/Experience";
 import HardSkill from "./content/HardSkill";
 import SoftSkill from "./content/SoftSkill";
-import Experience from "./content/Experience";
 
 interface MainContentProps {
   onPathChange: (path: string) => void;

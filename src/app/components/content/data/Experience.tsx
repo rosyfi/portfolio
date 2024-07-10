@@ -3,6 +3,10 @@ interface JobCard {
   details: string[];
   location: string;
   logo: string;
+  startYear: number;
+  startMonth: string;
+  endYear: number;
+  endMonth: string;
 }
 
 const cardsLeft: JobCard[] = [
@@ -16,6 +20,10 @@ const cardsLeft: JobCard[] = [
     ],
     location: "Frankfurt am Main, Germany",
     logo: "/logo/adesso.png",
+    startYear: 2022,
+    startMonth: "Sep",
+    endYear: 2023,
+    endMonth: "Sep",
   },
   {
     title: "Rotation-Internship",
@@ -29,6 +37,10 @@ const cardsLeft: JobCard[] = [
     ],
     location: "Frankfurt am Main, Germany",
     logo: "/logo/adesso.png",
+    startYear: 2021,
+    startMonth: "Sep",
+    endYear: 2022,
+    endMonth: "Feb",
   },
   {
     title: "Digital Marketing Intern in a Start-Up",
@@ -41,6 +53,10 @@ const cardsLeft: JobCard[] = [
     ],
     location: "Frankfurt am Main, Germany",
     logo: "/logo/walkie.png",
+    startYear: 2018,
+    startMonth: "Jan",
+    endYear: 2018,
+    endMonth: "Jun",
   },
   {
     title: "Fashion Design Intern",
@@ -51,6 +67,10 @@ const cardsLeft: JobCard[] = [
     ],
     location: "Frankfurt am Main, Germany",
     logo: "/logo/vaishali.png",
+    startYear: 2016,
+    startMonth: "Jan",
+    endYear: 2016,
+    endMonth: "Jan",
   },
 ];
 const cardsRight: JobCard[] = [
@@ -65,6 +85,10 @@ const cardsRight: JobCard[] = [
     ],
     location: "Frankfurt am Main, Germany",
     logo: "/logo/adesso.png",
+    startYear: 2023,
+    startMonth: "Sep",
+    endYear: 2024,
+    endMonth: "Apr",
   },
   {
     title: "Software Developer Working Student",
@@ -76,12 +100,20 @@ const cardsRight: JobCard[] = [
     ],
     location: "Frankfurt am Main, Germany",
     logo: "/logo/adesso.png",
+    startYear: 2022,
+    startMonth: "Mar",
+    endYear: 2022,
+    endMonth: "Sep",
   },
   {
     title: "Allrounder in the Backoffice",
     details: ["Assistance of daily tasks", "Handled accounting duties"],
     location: "Frankfurt am Main, Germany",
     logo: "/logo/adesso.png",
+    startYear: 2019,
+    startMonth: "Sep",
+    endYear: 2020,
+    endMonth: "Jan",
   },
   {
     title: "Administrative Assistant",
@@ -93,6 +125,10 @@ const cardsRight: JobCard[] = [
     ],
     location: "Chicago, USA",
     logo: "/logo/adesso.png",
+    startYear: 2017,
+    startMonth: "Jun",
+    endYear: 2017,
+    endMonth: "Nov",
   },
 ];
 

@@ -14,12 +14,16 @@ const Experience = () => {
             details={cardsLeft[index].details}
             location={cardsLeft[index].location}
             logo={cardsLeft[index].logo}
+            startYear={cardsLeft[index].startYear}
+            startMonth={cardsLeft[index].startMonth}
+            endYear={cardsLeft[index].endYear}
+            endMonth={cardsLeft[index].endMonth}
             key={key}
           />
         ))}
       </div>
 
-      <div className={styles.timeLineContainer}>
+      {/* <div className={styles.timeLineContainer}>
         {Array.from({ length: 8 }).map((_) => (
           <div className={styles.timeLine}></div>
         ))}
@@ -168,7 +172,7 @@ const Experience = () => {
           <div className={styles.timeLine}></div>
         ))}
         <h1 className={styles.year}>2015</h1>
-      </div>
+      </div> */}
       <div className={styles.cardsRightContainer}>
         {Object.keys(cardsRight).map((key: string, index: number) => (
           <JobCard
@@ -176,6 +180,10 @@ const Experience = () => {
             details={cardsRight[index].details}
             location={cardsRight[index].location}
             logo={cardsRight[index].logo}
+            startYear={cardsRight[index].startYear}
+            startMonth={cardsRight[index].startMonth}
+            endYear={cardsRight[index].endYear}
+            endMonth={cardsRight[index].endMonth}
             key={key}
           />
         ))}
