@@ -14,6 +14,10 @@ interface JobCardProps {
   left: boolean;
 }
 
+/**
+ * All month dots with the card next to it.
+ * @returns
+ */
 const JobCard: React.FC<JobCardProps> = ({
   title,
   details,
@@ -26,17 +30,19 @@ const JobCard: React.FC<JobCardProps> = ({
   left,
 }) => {
   return (
-    <div className={styles.container}>
-      {!left && (
-        <WorkTimeline
-          startYear={startYear}
-          startMonth={startMonth}
-          endYear={endYear}
-          endMonth={endMonth}
-          left={left}
-        />
-      )}
-      <div className={styles.cardContainer}>
+    <div
+      className={styles.container}
+      style={{ flexDirection: left ? "row-reverse" : "row" }}
+    >
+      <WorkTimeline
+        startYear={startYear}
+        startMonth={startMonth}
+        endYear={endYear}
+        endMonth={endMonth}
+        left={left}
+      />
+      {/* </div>
+      <div className={styles.cardContainer} style={{ width: "45%" }}>
         <h2 className={styles.title}>{title}</h2>
         <ul>
           {details.map((detail, i) => (
@@ -49,16 +55,7 @@ const JobCard: React.FC<JobCardProps> = ({
           <span className={styles.locationName}>{location}</span>
         </i>
         <img src={logo} alt={`${logo} logo`} className={styles.logo} />
-      </div>
-      {left && (
-        <WorkTimeline
-          startYear={startYear}
-          startMonth={startMonth}
-          endYear={endYear}
-          endMonth={endMonth}
-          left={left}
-        />
-      )}
+      </div> */}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-interface JobCard {
+export interface JobCardType {
   title: string;
   details: string[];
   location: string;
@@ -9,7 +9,7 @@ interface JobCard {
   endMonth: string;
 }
 
-const cards: JobCard[] = [
+const cards: JobCardType[] = [
   {
     title: "Software Developer Consultant",
     details: [
@@ -22,7 +22,7 @@ const cards: JobCard[] = [
     location: "Frankfurt am Main, Germany",
     logo: "/logo/adesso.png",
     startYear: 2023,
-    startMonth: "Sep",
+    startMonth: "Oct",
     endYear: 2024,
     endMonth: "Apr",
   },
@@ -54,7 +54,7 @@ const cards: JobCard[] = [
     startYear: 2022,
     startMonth: "Mar",
     endYear: 2022,
-    endMonth: "Sep",
+    endMonth: "Aug",
   },
   {
     title: "Rotation-Internship",
@@ -128,6 +128,26 @@ const cards: JobCard[] = [
     endYear: 2016,
     endMonth: "Jan",
   },
+];
+
+export type Month = {
+  name: string;
+  index: number;
+};
+
+export const months: Month[] = [
+  { name: "Jan", index: 0 },
+  { name: "Feb", index: 1 },
+  { name: "Mar", index: 2 },
+  { name: "Apr", index: 3 },
+  { name: "May", index: 4 },
+  { name: "Jun", index: 5 },
+  { name: "Jul", index: 6 },
+  { name: "Aug", index: 7 },
+  { name: "Sep", index: 8 },
+  { name: "Oct", index: 9 },
+  { name: "Nov", index: 10 },
+  { name: "Dec", index: 11 },
 ];
 
 export default cards;
