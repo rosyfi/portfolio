@@ -59,14 +59,14 @@ const WorkTimeline: React.FC<{
   startMonth: string;
   endYear: number;
   endMonth: string;
-  // left: boolean;
-}> = ({ startYear, startMonth, endYear, endMonth }) => {
+  left: boolean;
+}> = ({ startYear, startMonth, endYear, endMonth, left }) => {
   const timeline = getMonthsInRange(startYear, startMonth, endYear, endMonth);
 
   return (
     <div
       className={styles.timeline}
-      // style={left ? {} : { alignItems: "flex-start" }}
+      style={left ? {} : { alignItems: "flex-start" }}
     >
       {timeline.map(
         (month, index) =>
@@ -74,7 +74,7 @@ const WorkTimeline: React.FC<{
             <div className={styles.timeline}>
               <div
                 className={styles.lineContainer}
-                // style={left ? {} : { flexDirection: "row-reverse" }}
+                style={left ? {} : { flexDirection: "row-reverse" }}
               >
                 <div className={styles.line} />
                 <div className={styles.monthContainer}>

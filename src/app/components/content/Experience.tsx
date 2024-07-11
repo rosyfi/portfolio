@@ -23,7 +23,7 @@ const Experience = () => {
             startMonth={card.startMonth}
             endYear={card.endYear}
             endMonth={card.endMonth}
-            // left={card.left}
+            left={i % 2 === 0}
           />
         ))}
       </div>

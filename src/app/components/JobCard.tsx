@@ -11,7 +11,7 @@ interface JobCardProps {
   startMonth: string;
   endYear: number;
   endMonth: string;
-  // left: boolean;
+  left: boolean;
 }
 
 const JobCard: React.FC<JobCardProps> = ({
@@ -23,11 +23,11 @@ const JobCard: React.FC<JobCardProps> = ({
   startMonth,
   endYear,
   endMonth,
-  // left,
+  left,
 }) => {
   return (
     <div className={styles.container}>
-      {/* {!left && (
+      {!left && (
         <WorkTimeline
           startYear={startYear}
           startMonth={startMonth}
@@ -35,7 +35,7 @@ const JobCard: React.FC<JobCardProps> = ({
           endMonth={endMonth}
           left={left}
         />
-      )} */}
+      )}
       <div className={styles.cardContainer}>
         <h2 className={styles.title}>{title}</h2>
         <ul>
@@ -50,15 +50,15 @@ const JobCard: React.FC<JobCardProps> = ({
         </i>
         <img src={logo} alt={`${logo} logo`} className={styles.logo} />
       </div>
-      {/* {left && ( */}
-      <WorkTimeline
-        startYear={startYear}
-        startMonth={startMonth}
-        endYear={endYear}
-        endMonth={endMonth}
-        // left={left}
-      />
-      {/* )} */}
+      {left && (
+        <WorkTimeline
+          startYear={startYear}
+          startMonth={startMonth}
+          endYear={endYear}
+          endMonth={endMonth}
+          left={left}
+        />
+      )}
     </div>
   );
 };
