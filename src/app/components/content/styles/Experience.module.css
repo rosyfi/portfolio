@@ -2,14 +2,11 @@
   display: flex;
 }
 
-.test {
-  flex: 1;
-}
-
 .test2 {
   flex: 1;
   display: flex;
   flex-direction: column;
+  gap: var(--timeline-gap);
 }
 
 .timeLineContainer {
@@ -61,4 +58,19 @@
 .space {
   height: 5%;
   width: 80px;
+}
+
+.timeLineItem {
+  display: flex;
+}
+
+.centerTimeline {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  gap: var(--timeline-gap);
+}
+
+.jobCard {
+  width: 45%;
 }

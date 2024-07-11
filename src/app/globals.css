@@ -11,6 +11,8 @@
   /* fonts*/
   --font-body: "Overpass Mono", sans-serif;
   --font-heading: "Trispace", sans-serif;
+
+  --timeline-gap: 15px;
 }
 
 /* @media (prefers-color-scheme: dark) {

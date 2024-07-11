@@ -55,29 +55,31 @@ const Experience = () => {
     <div className={`container ${styles.container}`}>
       <div className={styles.test2}>
         {cards.map((card, i) => (
-          // <JobCard
-          //   key={i}
-          //   title={card.title}
-          //   details={card.details}
-          //   location={card.location}
-          //   logo={card.logo}
-          //   startYear={card.startYear}
-          //   startMonth={card.startMonth}
-          //   endYear={card.endYear}
-          //   endMonth={card.endMonth}
-          //   left={i % 2 === 0}
-          // />
-          <>
-            <TimeLine
-              startMonth={card.startMonth}
-              startYear={card.startYear}
-              endMonth={card.endMonth}
-              endYear={card.endYear}
-              work={true}
-              left={i % 2 === 0}
-            />
-            {timelineUntillNextJob(card, i)}
-          </>
+          <div
+            className={styles.timeLineItem}
+            style={{ flexDirection: i % 2 === 0 ? "row" : "row-reverse" }}
+          >
+            <div className={styles.jobCard}>
+              <JobCard
+                key={i}
+                title={card.title}
+                details={card.details}
+                location={card.location}
+                logo={card.logo}
+              />
+            </div>
+            <div className={styles.centerTimeline}>
+              <TimeLine
+                startMonth={card.startMonth}
+                startYear={card.startYear}
+                endMonth={card.endMonth}
+                endYear={card.endYear}
+                work={true}
+                left={i % 2 === 0}
+              />
+              {timelineUntillNextJob(card, i)}
+            </div>
+          </div>
         ))}
       </div>
     </div>

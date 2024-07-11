@@ -69,7 +69,9 @@ const TimeLine: React.FC<TimelineProps> = ({
               className={styles.line}
               style={{
                 opacity:
-                  index === 0 || index === workTimeline.length - 1 ? 1 : 0,
+                  (index === 0 || index === workTimeline.length - 1) && work
+                    ? 1
+                    : 0,
               }}
             />
             <div

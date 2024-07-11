@@ -4,16 +4,17 @@
   align-items: center;
   height: 60px;
   width: 60px;
-  border-radius: 30px;
+  border-radius: 25px;
   color: rgb(254, 250, 224);
   font-size: 26px;
-  padding-inline: 10px;
+  padding-inline: 30px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--timeline-gap);
 }
 
 .monthContainer {
