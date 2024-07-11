@@ -9,7 +9,7 @@ interface JobCard {
   endMonth: string;
 }
 
-const cardsLeft: JobCard[] = [
+const cards: JobCard[] = [
   {
     title: "Software Developer Trainee",
     details: [
@@ -72,8 +72,6 @@ const cardsLeft: JobCard[] = [
     endYear: 2016,
     endMonth: "Jan",
   },
-];
-const cardsRight: JobCard[] = [
   {
     title: "Software Developer Consultant",
     details: [
@@ -113,7 +111,7 @@ const cardsRight: JobCard[] = [
     startYear: 2019,
     startMonth: "Sep",
     endYear: 2020,
-    endMonth: "Jan",
+    endMonth: "Feb",
   },
   {
     title: "Administrative Assistant",
@@ -132,4 +130,4 @@ const cardsRight: JobCard[] = [
   },
 ];
 
-export { cardsLeft, cardsRight };
+export default cards;

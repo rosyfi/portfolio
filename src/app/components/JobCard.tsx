@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles/JobCard.module.css";
-import Timeline from "./TimeLine";
+import WorkTimeline from "./WorkTimeline";
 
 interface JobCardProps {
   title: string;
@@ -11,6 +11,7 @@ interface JobCardProps {
   startMonth: string;
   endYear: number;
   endMonth: string;
+  // left: boolean;
 }
 
 const JobCard: React.FC<JobCardProps> = ({
@@ -22,9 +23,19 @@ const JobCard: React.FC<JobCardProps> = ({
   startMonth,
   endYear,
   endMonth,
+  // left,
 }) => {
   return (
     <div className={styles.container}>
+      {/* {!left && (
+        <WorkTimeline
+          startYear={startYear}
+          startMonth={startMonth}
+          endYear={endYear}
+          endMonth={endMonth}
+          left={left}
+        />
+      )} */}
       <div className={styles.cardContainer}>
         <h2 className={styles.title}>{title}</h2>
         <ul>
@@ -39,12 +50,15 @@ const JobCard: React.FC<JobCardProps> = ({
         </i>
         <img src={logo} alt={`${logo} logo`} className={styles.logo} />
       </div>
-      <Timeline
+      {/* {left && ( */}
+      <WorkTimeline
         startYear={startYear}
         startMonth={startMonth}
         endYear={endYear}
         endMonth={endMonth}
+        // left={left}
       />
+      {/* )} */}
     </div>
   );
 };

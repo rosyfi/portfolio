@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles/TimeLine.module.css";
+import styles from "./styles/WorkTimeLine.module.css";
 
 type Month = {
   name: string;
@@ -54,21 +54,28 @@ const getMonthsInRange = (
   return monthNamesBetween.reverse();
 };
 
-const Timeline: React.FC<{
+const WorkTimeline: React.FC<{
   startYear: number;
   startMonth: string;
   endYear: number;
   endMonth: string;
+  // left: boolean;
 }> = ({ startYear, startMonth, endYear, endMonth }) => {
   const timeline = getMonthsInRange(startYear, startMonth, endYear, endMonth);
 
   return (
-    <div className={styles.timeline}>
+    <div
+      className={styles.timeline}
+      // style={left ? {} : { alignItems: "flex-start" }}
+    >
       {timeline.map(
         (month, index) =>
           ((index === 0 || index === timeline.length - 1) && (
             <div className={styles.timeline}>
-              <div className={styles.lineContainer}>
+              <div
+                className={styles.lineContainer}
+                // style={left ? {} : { flexDirection: "row-reverse" }}
+              >
                 <div className={styles.line} />
                 <div className={styles.monthContainer}>
                   <div className={styles.month}>{month.name}</div>
@@ -95,4 +102,4 @@ const Timeline: React.FC<{
   );
 };
 
-export default Timeline;
+export default WorkTimeline;
