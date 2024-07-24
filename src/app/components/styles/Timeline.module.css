@@ -29,3 +29,8 @@
   width: 100%;
   background-color: rgba(96, 108, 56);
 }
+
+.year {
+  font-weight: bold;
+  color: rgba(96, 108, 56);
+}

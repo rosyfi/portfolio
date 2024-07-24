@@ -92,9 +92,7 @@ const TimeLine: React.FC<TimelineProps> = ({
             />
           </div>
           {month.index === 0 && (
-            <span className={styles.year}>
-              {endYear - Math.floor(index / 12)}
-            </span>
+            <h2 className={styles.year}>{endYear - Math.floor(index / 12)}</h2>
           )}
         </>
       ))}

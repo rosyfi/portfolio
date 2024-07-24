@@ -48,4 +48,5 @@
   left: 0;
   right: 0;
   padding-top: 30px;
+  z-index: 99;
 }
