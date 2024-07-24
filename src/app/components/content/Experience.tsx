@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./styles/Experience.module.css";
 import JobCard from "../JobCard";
 import cards, { JobCardType, months } from "./data/Experience";
@@ -67,6 +67,26 @@ const timelineUntillNextJob = (currentJob: JobCardType, index: number) => {
 };
 
 const Experience = () => {
+  useEffect(() => {
+    const elements = document.querySelectorAll(`.${styles.fadeIn}`);
+
+    const checkVisibility = () => {
+      elements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          element.classList.add(styles.visible);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility(); // Trigger once on initial load
+
+    return () => {
+      window.removeEventListener("scroll", checkVisibility);
+    };
+  }, []);
+
   return (
     <div className={`container ${styles.container}`}>
       {cards.map((card, i) => (
@@ -75,7 +95,11 @@ const Experience = () => {
             className={styles.timeLineItems}
             style={{ flexDirection: i % 2 === 0 ? "row" : "row-reverse" }}
           >
-            <div className={`${styles["fade-in-right"]} ${styles.jobCard}`}>
+            <div
+              className={`${styles.fadeIn} ${
+                i % 2 == 0 ? styles.fadeInLeft : styles.fadeInRight
+              } ${styles.jobCard}`}
+            >
               <JobCard
                 key={i}
                 title={card.title}
