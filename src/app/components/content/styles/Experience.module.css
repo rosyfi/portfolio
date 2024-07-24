@@ -1,70 +1,16 @@
 .container {
   display: flex;
-}
-
-.test2 {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: var(--timeline-gap);
 }
 
-.timeLineContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  height: 100%;
-}
-
-.timeLine {
-  height: 35px;
-  width: 10px;
-  border-radius: 50px;
-  background-color: rgb(233, 237, 201);
-}
-
-.month {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 60px;
-  width: 60px;
-  border-radius: 30px;
-  background-color: rgba(96, 108, 56);
-  color: rgb(254, 250, 224);
-  font-size: 26px;
-}
-
-.year {
-  color: rgb(96, 108, 56);
-  font-size: 40px;
-  font-weight: bolder;
-}
-
-.line {
-  height: 5px;
-  width: 80px;
-  background-color: rgba(96, 108, 56);
-}
-
-.lineContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.space {
-  height: 5%;
-  width: 80px;
-}
-
-.timeLineItem {
+.timeLineItems {
   display: flex;
 }
 
-.centerTimeline {
+.timeline {
   display: flex;
   flex-direction: column;
   width: 10%;
@@ -73,4 +19,18 @@
 
 .jobCard {
   width: 45%;
+  position: relative;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fadeInRight 2s forwards;
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

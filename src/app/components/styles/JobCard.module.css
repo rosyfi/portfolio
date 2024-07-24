@@ -1,7 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  min-height: -webkit-fill-available;
+}
+
 .cardContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 
   border: solid;
   border-width: 4px;
@@ -9,12 +18,6 @@
   border-color: rgb(96, 108, 56);
   background-color: rgb(240, 240, 240);
   padding: 40px;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
 
 .title {

@@ -6,15 +6,40 @@ import TimeLine from "../Timeline";
 
 const timelineUntillNextJob = (currentJob: JobCardType, index: number) => {
   const prevJob = cards[index + 1];
-  if (!prevJob) return <></>;
 
   const currJobStartMonth = currentJob.startMonth;
   const currJobStartYear = currentJob.startYear;
-  const prevJobEndMonth = prevJob.endMonth;
-  const prevJobEndYear = prevJob.endYear;
-
   const currentJobStartMonthIdx =
     months.find((month) => month.name === currJobStartMonth)?.index ?? 0;
+
+  let endMonthRes =
+    months.find(
+      (month) =>
+        month.index === (((currentJobStartMonthIdx - 1) % 12) + 12) % 12
+    )?.name ?? "Tactical Nuke incoming!";
+  let endYearRes = currJobStartYear;
+
+  if (currentJobStartMonthIdx === 0) {
+    endMonthRes = months[11].name;
+    endYearRes = currJobStartYear - 1;
+  }
+
+  if (!prevJob) {
+    console.log(endMonthRes, endYearRes, currJobStartMonth);
+
+    return (
+      <TimeLine
+        work={false}
+        left={false}
+        endMonth={endMonthRes}
+        endYear={endYearRes}
+        startMonth={"Jan"}
+        startYear={currJobStartYear - 1}
+      />
+    );
+  }
+  const prevJobEndMonth = prevJob.endMonth;
+  const prevJobEndYear = prevJob.endYear;
 
   const prevJobEndMonthIdx =
     months.find((month) => month.name === prevJobEndMonth)?.index ?? 0;
@@ -23,19 +48,10 @@ const timelineUntillNextJob = (currentJob: JobCardType, index: number) => {
     months.find((month) => month.index === (prevJobEndMonthIdx + 1) % 12)
       ?.name ?? "Tactical Nuke incoming!";
   let startYearRes = prevJobEndYear;
-  let endMonthRes =
-    months.find((month) => month.index === (currentJobStartMonthIdx - 1) % 12)
-      ?.name ?? "Tactical Nuke incoming!";
-  let endYearRes = currJobStartYear;
 
   if (prevJobEndMonthIdx === 11) {
     startMonthRes = months[0].name;
     startYearRes = currJobStartYear + 1;
-  }
-
-  if (currentJobStartMonthIdx === 0) {
-    endMonthRes = months[11].name;
-    endYearRes = currJobStartYear - 1;
   }
 
   return (
@@ -53,13 +69,13 @@ const timelineUntillNextJob = (currentJob: JobCardType, index: number) => {
 const Experience = () => {
   return (
     <div className={`container ${styles.container}`}>
-      <div className={styles.test2}>
-        {cards.map((card, i) => (
+      {cards.map((card, i) => (
+        <>
           <div
-            className={styles.timeLineItem}
+            className={styles.timeLineItems}
             style={{ flexDirection: i % 2 === 0 ? "row" : "row-reverse" }}
           >
-            <div className={styles.jobCard}>
+            <div className={`${styles["fade-in-right"]} ${styles.jobCard}`}>
               <JobCard
                 key={i}
                 title={card.title}
@@ -68,7 +84,7 @@ const Experience = () => {
                 logo={card.logo}
               />
             </div>
-            <div className={styles.centerTimeline}>
+            <div className={styles.timeline}>
               <TimeLine
                 startMonth={card.startMonth}
                 startYear={card.startYear}
@@ -77,11 +93,11 @@ const Experience = () => {
                 work={true}
                 left={i % 2 === 0}
               />
-              {timelineUntillNextJob(card, i)}
             </div>
           </div>
-        ))}
-      </div>
+          {timelineUntillNextJob(card, i)}
+        </>
+      ))}
     </div>
   );
 };

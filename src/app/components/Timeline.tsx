@@ -2,14 +2,14 @@ import React from "react";
 import styles from "./styles/Timeline.module.css";
 import { Month, months } from "./content/data/Experience";
 
-type TimelineProps = {
+interface TimelineProps {
   startMonth: string;
   startYear: number;
   endMonth: string;
   endYear: number;
   work: boolean;
   left: boolean;
-};
+}
 
 /**
  * Return an array containing all month names in the given range inclusive start and end.
@@ -76,11 +76,14 @@ const TimeLine: React.FC<TimelineProps> = ({
             />
             <div
               className={styles.month}
-              style={{ backgroundColor: work ? "rgba(96, 108, 56)" : "red" }}
+              style={{
+                backgroundColor: work
+                  ? "rgba(96, 108, 56)"
+                  : "rgb(233, 237, 201)",
+              }}
             >
               {work ? month.name : ""}
             </div>
-
             <div
               className={styles.line}
               style={{

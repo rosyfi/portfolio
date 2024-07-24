@@ -9,6 +9,26 @@ export interface JobCardType {
   endMonth: string;
 }
 
+export type Month = {
+  name: string;
+  index: number;
+};
+
+export const months: Month[] = [
+  { name: "Jan", index: 0 },
+  { name: "Feb", index: 1 },
+  { name: "Mar", index: 2 },
+  { name: "Apr", index: 3 },
+  { name: "May", index: 4 },
+  { name: "Jun", index: 5 },
+  { name: "Jul", index: 6 },
+  { name: "Aug", index: 7 },
+  { name: "Sep", index: 8 },
+  { name: "Oct", index: 9 },
+  { name: "Nov", index: 10 },
+  { name: "Dec", index: 11 },
+];
+
 const cards: JobCardType[] = [
   {
     title: "Software Developer Consultant",
@@ -128,26 +148,6 @@ const cards: JobCardType[] = [
     endYear: 2016,
     endMonth: "Jan",
   },
-];
-
-export type Month = {
-  name: string;
-  index: number;
-};
-
-export const months: Month[] = [
-  { name: "Jan", index: 0 },
-  { name: "Feb", index: 1 },
-  { name: "Mar", index: 2 },
-  { name: "Apr", index: 3 },
-  { name: "May", index: 4 },
-  { name: "Jun", index: 5 },
-  { name: "Jul", index: 6 },
-  { name: "Aug", index: 7 },
-  { name: "Sep", index: 8 },
-  { name: "Oct", index: 9 },
-  { name: "Nov", index: 10 },
-  { name: "Dec", index: 11 },
 ];
 
 export default cards;
