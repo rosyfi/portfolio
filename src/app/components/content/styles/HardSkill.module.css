@@ -4,7 +4,6 @@
 
   overflow: hidden;
   overflow-y: scroll;
-  height: 700px;
   padding-inline: 50px;
   scrollbar-color: rgb(96, 108, 56, 0.7) transparent;
 }

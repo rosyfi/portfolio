@@ -25,8 +25,6 @@ const timelineUntillNextJob = (currentJob: JobCardType, index: number) => {
   }
 
   if (!prevJob) {
-    console.log(endMonthRes, endYearRes, currJobStartMonth);
-
     return (
       <TimeLine
         work={false}
@@ -43,7 +41,6 @@ const timelineUntillNextJob = (currentJob: JobCardType, index: number) => {
 
   const prevJobEndMonthIdx =
     months.find((month) => month.name === prevJobEndMonth)?.index ?? 0;
-  console.log(prevJobEndMonthIdx);
   let startMonthRes =
     months.find((month) => month.index === (prevJobEndMonthIdx + 1) % 12)
       ?.name ?? "Tactical Nuke incoming!";
@@ -71,16 +68,23 @@ const Experience = () => {
     const elements = document.querySelectorAll(`.${styles.fadeIn}`);
 
     const checkVisibility = () => {
+      console.log("Scroll event fired");
+
       elements.forEach((element) => {
         const rect = element.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
+        if (rect.top <= window.innerHeight && rect.bottom > 0) {
           element.classList.add(styles.visible);
         }
       });
     };
 
-    window.addEventListener("scroll", checkVisibility);
-    checkVisibility(); // Trigger once on initial load
+    const scrollContainer = document.getElementById(
+      "experienceScrollContainer"
+    );
+    if (!scrollContainer) return;
+
+    scrollContainer.addEventListener("scroll", checkVisibility);
+    checkVisibility();
 
     return () => {
       window.removeEventListener("scroll", checkVisibility);
@@ -88,9 +92,12 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className={`container ${styles.container}`}>
+    <div
+      className={`container ${styles.container}`}
+      id="experienceScrollContainer"
+    >
       {cards.map((card, i) => (
-        <>
+        <div key={i}>
           <div
             className={styles.timeLineItems}
             style={{ flexDirection: i % 2 === 0 ? "row" : "row-reverse" }}
@@ -120,7 +127,7 @@ const Experience = () => {
             </div>
           </div>
           {timelineUntillNextJob(card, i)}
-        </>
+        </div>
       ))}
     </div>
   );
