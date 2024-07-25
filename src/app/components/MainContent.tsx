@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import styles from "../styles/MainContent.module.css";
 import MenuBar from "./MenuBar";
-import About from "./content/About";
-import styles from "./styles/MainContent.module.css";
-import Education from "./content/Education";
-import Experience from "./content/Experience";
-import HardSkill from "./content/HardSkill";
-import SoftSkill from "./content/SoftSkill";
+import About from "./content/about/About";
+import Education from "./content/education/Education";
+import Experience from "./content/experience/Experience";
+import HardSkill from "./content/skill/hard/HardSkill";
+import SoftSkill from "./content/skill/soft/SoftSkill";
 
 interface MainContentProps {
   onPathChange: (path: string) => void;

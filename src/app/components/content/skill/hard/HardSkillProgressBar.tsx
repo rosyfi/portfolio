@@ -1,6 +1,5 @@
 import React from "react";
-
-import styles from "./styles/HardSkillProgressBar.module.css";
+import styles from "../../../../styles/content/skill/HardSkillProgressBar.module.css";
 
 interface HardSkillProgressBarProps {
   title: string;

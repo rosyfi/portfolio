@@ -1,9 +1,10 @@
 import React from "react";
-import styles from "./styles/SoftSkill.module.css";
-import HandsOnExpereinceCard from "../HandsOnExperienceCard";
-import SoftSkillCard from "../SoftSkillCard";
+import styles from "../../../../styles/content/skill/SoftSkill.module.css";
 
-import softSkills from "./data/SoftSkill";
+import HandsOnExpereinceCard from "./HandsOnExperienceCard";
+import SoftSkillCard from "./SoftSkillCard";
+
+import softSkills from "../../data/SoftSkill";
 
 const SoftSkill = () => {
   return (

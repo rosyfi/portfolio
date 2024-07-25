@@ -1,6 +1,5 @@
 import React from "react";
-
-import styles from "./styles/HardSkillCard.module.css";
+import styles from "../../../../styles/content/skill/HardSkillCard.module.css";
 
 interface HardSkillCardProp {
   title: string;

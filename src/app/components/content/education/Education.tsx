@@ -1,6 +1,5 @@
 import React from "react";
-
-import styles from "./styles/Education.module.css";
+import styles from "../../../styles/content/education/Education.module.css";
 
 const Education = () => {
   return (

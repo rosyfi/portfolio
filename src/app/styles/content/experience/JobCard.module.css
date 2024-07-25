@@ -6,7 +6,7 @@
   min-height: -webkit-fill-available;
 }
 
-.cardContainer {
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,6 +1,7 @@
 import React from "react";
-import styles from "./styles/Timeline.module.css";
-import { Month, months } from "./content/data/Experience";
+import styles from "../../../styles/content/experience/Timeline.module.css";
+
+import { Month, months } from "../data/Experience";
 
 interface TimelineProps {
   startMonth: string;
@@ -12,10 +13,15 @@ interface TimelineProps {
 }
 
 /**
- * Return an array containing all month names in the given range inclusive start and end.
- * @returns
+ * Returns an array of months between two specified dates.
+ *
+ * @param startYear
+ * @param startMonth
+ * @param endYear
+ * @param endMonth
+ * @returns An array of `Month` objects representing each month in the range from `startMonth` to `endMonth`, inclusive.
  */
-export const getMonthsInRange = (
+const getMonthsInRange = (
   startYear: number,
   startMonth: string,
   endYear: number,
@@ -57,10 +63,11 @@ const TimeLine: React.FC<TimelineProps> = ({
 
   return (
     <div className={styles.container}>
-      {workTimeline.map((month, index) => (
+      {workTimeline.map((month, i) => (
+        // TODO: Hier muss key={i} vergeben werden aber daadurch werden die lines nicht angezeigt?!?!?!
         <>
           <div
-            className={styles.monthContainer}
+            className={styles.timelineContent}
             style={{
               flexDirection: left ? "row" : "row-reverse",
             }}
@@ -69,9 +76,7 @@ const TimeLine: React.FC<TimelineProps> = ({
               className={styles.line}
               style={{
                 opacity:
-                  (index === 0 || index === workTimeline.length - 1) && work
-                    ? 1
-                    : 0,
+                  (i === 0 || i === workTimeline.length - 1) && work ? 1 : 0,
               }}
             />
             <div
@@ -92,7 +97,7 @@ const TimeLine: React.FC<TimelineProps> = ({
             />
           </div>
           {month.index === 0 && (
-            <h2 className={styles.year}>{endYear - Math.floor(index / 12)}</h2>
+            <h2 className={styles.year}>{endYear - Math.floor(i / 12)}</h2>
           )}
         </>
       ))}

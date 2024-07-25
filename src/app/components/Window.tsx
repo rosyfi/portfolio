@@ -1,6 +1,5 @@
 import React from "react";
-
-import styles from "./styles/Window.module.css";
+import styles from "../styles/Window.module.css";
 import WindowBar from "./WindowBar";
 
 interface WindowProps {

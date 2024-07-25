@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles/HandsOnExperienceType.module.css";
+import styles from "../../../../styles/content/skill/HandsOnExperienceType.module.css";
 
 interface HandsOnExperienceTypeProps {
   tasks: Array<string>;

@@ -1,7 +1,6 @@
 import React from "react";
-
-import styles from "./styles/MenuBar.module.css";
-import SkillsDropdown from "./SkillsDropdown";
+import styles from "../styles/MenuBar.module.css";
+import SkillsDropdown from "./content/skill/SkillsDropdown";
 
 interface MenuBarProps {
   onMenuItemClick: (content: number, path: string) => void;

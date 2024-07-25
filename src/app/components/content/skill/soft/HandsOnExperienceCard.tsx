@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./styles/HandsOnExperienceCard.module.css";
+import styles from "../../../../styles/content/skill/HandsOnExperienceCard.module.css";
 import HandsOnExperienceType from "./HandsOnExperienceType";
 
 interface SoftSkillsProps {

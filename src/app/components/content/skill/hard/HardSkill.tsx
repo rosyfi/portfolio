@@ -1,8 +1,7 @@
 import React from "react";
-
-import styles from "./styles/HardSkill.module.css";
-import HardSkillCard from "../HardSkillCard";
-import HardSkillProgressBar from "../HardSkillProgressBar";
+import styles from "../../../../styles/content/skill/HardSkill.module.css";
+import HardSkillCard from "./HardSkillCard";
+import HardSkillProgressBar from "./HardSkillProgressBar";
 
 const HardSkill = () => {
   return (

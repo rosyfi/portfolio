@@ -1,3 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--timeline-gap);
+}
+
+.timelineContent {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
 .month {
   display: flex;
   justify-content: center;
@@ -8,20 +22,6 @@
   color: rgb(254, 250, 224);
   font-size: 26px;
   padding-inline: 30px;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--timeline-gap);
-}
-
-.monthContainer {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
 }
 
 .line {

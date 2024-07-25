@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles/JobCard.module.css";
+import styles from "../../../styles/content/experience/JobCard.module.css";
 
 interface JobCardProps {
   title: string;
@@ -8,10 +8,6 @@ interface JobCardProps {
   logo: string;
 }
 
-/**
- * All month dots with the card next to it.
- * @returns
- */
 const JobCard: React.FC<JobCardProps> = ({
   title,
   details,
@@ -20,7 +16,7 @@ const JobCard: React.FC<JobCardProps> = ({
 }) => {
   return (
     <div className={styles.container}>
-      <div className={styles.cardContainer}>
+      <div className={styles.content}>
         <h2 className={styles.title}>{title}</h2>
         <ul>
           {details.map((detail, i) => (

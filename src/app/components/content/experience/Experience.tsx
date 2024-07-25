@@ -1,9 +1,16 @@
 import React, { useEffect } from "react";
-import styles from "./styles/Experience.module.css";
-import JobCard from "../JobCard";
-import cards, { JobCardType, months } from "./data/Experience";
-import TimeLine from "../Timeline";
+import styles from "../../../styles/content/experience/Experience.module.css";
+import JobCard from "./JobCard";
+import cards, { JobCardType, months } from "../data/Experience";
+import TimeLine from "./Timeline";
 
+/**
+ * Generates a timeline component for the period between the current job and the next job.
+ *
+ * @param currentJob
+ * @param index
+ * @returns A `TimeLine` component representing the period from the end of the previous job (or the start of the current job if no previous job exists) to the start of the current job.
+ */
 const timelineUntillNextJob = (currentJob: JobCardType, index: number) => {
   const prevJob = cards[index + 1];
 
@@ -68,8 +75,6 @@ const Experience = () => {
     const elements = document.querySelectorAll(`.${styles.fadeIn}`);
 
     const checkVisibility = () => {
-      console.log("Scroll event fired");
-
       elements.forEach((element) => {
         const rect = element.getBoundingClientRect();
         if (rect.top <= window.innerHeight && rect.bottom > 0) {
@@ -93,19 +98,19 @@ const Experience = () => {
 
   return (
     <div
-      className={`container ${styles.container}`}
+      className={`container col-11 ${styles.container}`}
       id="experienceScrollContainer"
     >
       {cards.map((card, i) => (
-        <div key={i}>
+        <div className={styles.cardsContainer} key={i}>
           <div
-            className={styles.timeLineItems}
+            className={styles.cardsLayout}
             style={{ flexDirection: i % 2 === 0 ? "row" : "row-reverse" }}
           >
             <div
               className={`${styles.fadeIn} ${
                 i % 2 == 0 ? styles.fadeInLeft : styles.fadeInRight
-              } ${styles.jobCard}`}
+              } ${styles.jobCardWrapper}`}
             >
               <JobCard
                 key={i}
@@ -115,7 +120,7 @@ const Experience = () => {
                 logo={card.logo}
               />
             </div>
-            <div className={styles.timeline}>
+            <div className={styles.timelineWrapper}>
               <TimeLine
                 startMonth={card.startMonth}
                 startYear={card.startYear}

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-import styles from "./styles/SkillsDropdown.module.css";
+import styles from "../.././../styles/content/skill/SkillsDropdown.module.css";
 
 interface SkillsDropDownProps {
   onMenuItemClick: (content: number, path: string) => void;
