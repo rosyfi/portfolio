@@ -3,11 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: inherit;
-
-  overflow: hidden;
   overflow-y: scroll;
-  padding-inline: 50px;
-  scrollbar-color: rgb(96, 108, 56, 0.7) transparent;
 }
 
 .container p {

@@ -1,11 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-
-  overflow: hidden;
   overflow-y: scroll;
-  padding-inline: 50px;
-  scrollbar-color: rgb(96, 108, 56, 0.7) transparent;
 }
 
 .hardSkillCards {
