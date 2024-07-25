@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "../../../../styles/content/skill/HandsOnExperienceType.module.css";
 import HandsOnExperienceCard from "./HandsOnExperienceCard";
 
-interface SoftSkillsProps {
+interface HandsOnExperienceTypeProps {
   skills: {
     tasks: Array<string>;
     impression: string;
@@ -12,7 +12,9 @@ interface SoftSkillsProps {
   }[];
 }
 
-const SoftSkillCard: React.FC<SoftSkillsProps> = ({ skills }) => {
+const HandsOnExperienceType: React.FC<HandsOnExperienceTypeProps> = ({
+  skills,
+}) => {
   const [type, setType] = useState<number | null>(null);
 
   const handleButtonClick = (index: number) => {
@@ -37,47 +39,21 @@ const SoftSkillCard: React.FC<SoftSkillsProps> = ({ skills }) => {
         <>
           <h2>Hands-On Experience</h2>
           <div className={styles.typesWrapper}>
-            {skills.find((skill) => {
-              return skill.place === "University";
-            }) !== undefined && (
-              <button
-                className={styles.type}
-                onClick={() => handleButtonClick(0)}
-              >
-                <img
-                  className={styles.svg}
-                  src="/university.svg"
-                  alt="unviersity"
-                />
-                <span>Univeristy</span>
-              </button>
-            )}
-            {skills.find((skill) => {
-              return skill.place === "Internship";
-            }) !== undefined && (
-              <button
-                className={styles.type}
-                onClick={() => handleButtonClick(1)}
-              >
-                <img
-                  className={styles.svg}
-                  src="/internship.svg"
-                  alt="internship"
-                />
-                <span>Internship</span>
-              </button>
-            )}
-            {skills.find((skill) => {
-              return skill.place === "Work";
-            }) !== undefined && (
-              <button
-                className={styles.type}
-                onClick={() => handleButtonClick(2)}
-              >
-                <img className={styles.svg} src="/work.svg" alt="work" />
-                <span>Work</span>
-              </button>
-            )}
+            {skills.map((skill, index) => {
+              return (
+                <button
+                  className={styles.type}
+                  onClick={() => handleButtonClick(index)}
+                >
+                  <img
+                    className={styles.svg}
+                    src={`/${skill.svg}.svg`}
+                    alt={skill.place}
+                  />
+                  <span>{skill.place}</span>
+                </button>
+              );
+            })}
           </div>
         </>
       ) : (
@@ -97,4 +73,4 @@ const SoftSkillCard: React.FC<SoftSkillsProps> = ({ skills }) => {
   );
 };
 
-export default SoftSkillCard;
+export default HandsOnExperienceType;
