@@ -1,73 +1,100 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../../../styles/content/skill/HandsOnExperienceType.module.css";
+import HandsOnExperienceCard from "./HandsOnExperienceCard";
 
-interface HandsOnExperienceTypeProps {
-  tasks: Array<string>;
-  impression: string;
-  keyTakeaway: string;
-  onPrevious: () => void;
-  onNext: () => void;
-  disablePrevious: boolean;
-  disableNext: boolean;
-  svg: string;
-  place: string;
+interface SoftSkillsProps {
+  skills: {
+    tasks: Array<string>;
+    impression: string;
+    keyTakeaway: string;
+    svg: string;
+    place: string;
+  }[];
 }
 
-const HandsOnExperienceType: React.FC<HandsOnExperienceTypeProps> = ({
-  tasks,
-  impression,
-  keyTakeaway,
-  onPrevious,
-  onNext,
-  disablePrevious,
-  disableNext,
-  svg,
-  place,
-}) => {
+const SoftSkillCard: React.FC<SoftSkillsProps> = ({ skills }) => {
+  const [type, setType] = useState<number | null>(null);
+
+  const handleButtonClick = (index: number) => {
+    setType(index);
+  };
+
+  const handlePrevious = () => {
+    if (type !== null && type > 0) {
+      setType(type - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (type !== null && type < skills.length - 1) {
+      setType(type + 1);
+    }
+  };
+
   return (
     <div className={styles.container}>
-      <button onClick={onPrevious} disabled={disablePrevious}>
-        <img className={styles.svg} src="arrowLeft.svg" alt="arrowLeft" />
-      </button>
-
-      <div className={styles.content}>
-        <div className={styles.topWrapper}>
-          <div className={styles.tasksWrapper}>
-            <h2>Tasks</h2>
-            <ul className={styles["custom-list"]}>
-              {tasks.map((task) => (
-                <li key={task}>{task}</li>
-              ))}
-            </ul>
+      {type === null ? (
+        <>
+          <h2>Hands-On Experience</h2>
+          <div className={styles.typesWrapper}>
+            {skills.find((skill) => {
+              return skill.place === "University";
+            }) !== undefined && (
+              <button
+                className={styles.type}
+                onClick={() => handleButtonClick(0)}
+              >
+                <img
+                  className={styles.svg}
+                  src="/university.svg"
+                  alt="unviersity"
+                />
+                <span>Univeristy</span>
+              </button>
+            )}
+            {skills.find((skill) => {
+              return skill.place === "Internship";
+            }) !== undefined && (
+              <button
+                className={styles.type}
+                onClick={() => handleButtonClick(1)}
+              >
+                <img
+                  className={styles.svg}
+                  src="/internship.svg"
+                  alt="internship"
+                />
+                <span>Internship</span>
+              </button>
+            )}
+            {skills.find((skill) => {
+              return skill.place === "Work";
+            }) !== undefined && (
+              <button
+                className={styles.type}
+                onClick={() => handleButtonClick(2)}
+              >
+                <img className={styles.svg} src="/work.svg" alt="work" />
+                <span>Work</span>
+              </button>
+            )}
           </div>
-
-          <div className={styles.impressionWrapper}>
-            <h2>Impression</h2>
-            <p>{impression}</p>
-          </div>
-        </div>
-
-        <div className={styles.bottomWrapper}>
-          <div className={styles.keyTakeawayWrapper}>
-            <h4>Key Takeaway:</h4>
-            <span>{keyTakeaway}</span>
-          </div>
-          <div className={styles.placeWrapper}>
-            <img
-              className={styles.placeSymbol}
-              src={`${svg}.svg`}
-              alt={`${svg}`}
-            />
-            <span>{place}</span>
-          </div>
-        </div>
-      </div>
-
-      <button onClick={onNext} disabled={disableNext}>
-        <img className={styles.svg} src="arrowRight.svg" alt="arrowRight" />
-      </button>
+        </>
+      ) : (
+        <HandsOnExperienceCard
+          tasks={skills[type].tasks}
+          impression={skills[type].impression}
+          keyTakeaway={skills[type].keyTakeaway}
+          onPrevious={handlePrevious}
+          onNext={handleNext}
+          disablePrevious={type === 0}
+          disableNext={type === skills.length - 1}
+          svg={skills[type].svg}
+          place={skills[type].place}
+        />
+      )}
     </div>
   );
 };
 
-export default HandsOnExperienceType;
+export default SoftSkillCard;

@@ -1,94 +1,73 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "../../../../styles/content/skill/HandsOnExperienceCard.module.css";
-import HandsOnExperienceType from "./HandsOnExperienceType";
 
-interface SoftSkillsProps {
-  skills: {
-    tasks: Array<string>;
-    impression: string;
-    keyTakeaway: string;
-    svg: string;
-    place: string;
-  }[];
+interface HandsOnExperienceCardProps {
+  tasks: Array<string>;
+  impression: string;
+  keyTakeaway: string;
+  onPrevious: () => void;
+  onNext: () => void;
+  disablePrevious: boolean;
+  disableNext: boolean;
+  svg: string;
+  place: string;
 }
 
-const SoftSkillCard: React.FC<SoftSkillsProps> = ({ skills }) => {
-  const [type, setType] = useState<number | null>(null);
-
-  const handleButtonClick = (index: number) => {
-    setType(index);
-  };
-
-  const handlePrevious = () => {
-    if (type !== null && type > 0) {
-      setType(type - 1);
-    }
-  };
-
-  const handleNext = () => {
-    if (type !== null && type < skills.length - 1) {
-      setType(type + 1);
-    }
-  };
-
+const HandsOnExperienceCard: React.FC<HandsOnExperienceCardProps> = ({
+  tasks,
+  impression,
+  keyTakeaway,
+  onPrevious,
+  onNext,
+  disablePrevious,
+  disableNext,
+  svg,
+  place,
+}) => {
   return (
     <div className={styles.container}>
-      {type === null ? (
-        <>
-          <h2>Hands-On Experience</h2>
-          <div className={styles.typesWrapper}>
-            {skills[0]?.tasks?.length > 0 && (
-              <button
-                className={styles.type}
-                onClick={() => handleButtonClick(0)}
-              >
-                <img
-                  className={styles.svg}
-                  src="/university.svg"
-                  alt="unviersity"
-                />
-                <span>Univeristy</span>
-              </button>
-            )}
-            {skills[1]?.tasks?.length > 0 && (
-              <button
-                className={styles.type}
-                onClick={() => handleButtonClick(1)}
-              >
-                <img
-                  className={styles.svg}
-                  src="/internship.svg"
-                  alt="internship"
-                />
-                <span>Internship</span>
-              </button>
-            )}
-            {skills[2]?.tasks?.length > 0 && (
-              <button
-                className={styles.type}
-                onClick={() => handleButtonClick(2)}
-              >
-                <img className={styles.svg} src="/work.svg" alt="work" />
-                <span>Work</span>
-              </button>
-            )}
+      <button onClick={onPrevious} disabled={disablePrevious}>
+        <img className={styles.svg} src="arrowLeft.svg" alt="arrowLeft" />
+      </button>
+
+      <div className={styles.content}>
+        <div className={styles.topWrapper}>
+          <div className={styles.tasksWrapper}>
+            <h2>Tasks</h2>
+            <ul className={styles["custom-list"]}>
+              {tasks.map((task) => (
+                <li key={task}>{task}</li>
+              ))}
+            </ul>
           </div>
-        </>
-      ) : (
-        <HandsOnExperienceType
-          tasks={skills[type].tasks}
-          impression={skills[type].impression}
-          keyTakeaway={skills[type].keyTakeaway}
-          onPrevious={handlePrevious}
-          onNext={handleNext}
-          disablePrevious={type === 0}
-          disableNext={type === skills.length - 1}
-          svg={skills[type].svg}
-          place={skills[type].place}
-        />
-      )}
+
+          <div className={styles.impressionWrapper}>
+            <h2>Impression</h2>
+            <p>{impression}</p>
+          </div>
+        </div>
+
+        <div className={styles.bottomWrapper}>
+          <div className={styles.keyTakeawayWrapper}>
+            <h4>Key Takeaway:</h4>
+            <span>{keyTakeaway}</span>
+          </div>
+          <div className={styles.placeWrapper}>
+            <img
+              className={styles.placeSymbol}
+              src={`${svg}.svg`}
+              alt={`${svg}`}
+            />
+            <span>{place}</span>
+          </div>
+        </div>
+      </div>
+
+      <button onClick={onNext} disabled={disableNext}>
+        <img className={styles.svg} src="arrowRight.svg" alt="arrowRight" />
+      </button>
     </div>
   );
 };
 
-export default SoftSkillCard;
+export default HandsOnExperienceCard;
