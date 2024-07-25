@@ -4,36 +4,36 @@
   height: 100%;
 }
 
-.topContainer {
-  display: flex;
-  gap: 25px;
-}
-
-.contentContainer {
+.content {
   display: flex;
   flex-direction: column;
 }
 
-.bottomContainer {
+.topWrapper {
+  display: flex;
+  gap: 25px;
+}
+
+.bottomWrapper {
   display: flex;
   justify-content: space-between;
 }
 
-.tasksContainer {
+.tasksWrapper {
   flex: 1;
 }
 
-.impressionContainer {
+.impressionWrapper {
   flex: 1;
 }
 
-.keyTakeawayContainer {
+.keyTakeawayWrapper {
   display: flex;
   align-items: flex-end;
   gap: 10px;
 }
 
-.placeContainer {
+.placeWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,20 +53,20 @@
   cursor: not-allowed;
 }
 
-.keyTakeawayContainer h4 {
+.keyTakeawayWrapper h4 {
   font-style: italic;
   color: rgb(96, 108, 56);
   font-weight: lighter;
 }
 
-.keyTakeawayContainer span {
+.keyTakeawayWrapper span {
   font-weight: bolder;
   font-size: 24px;
   color: rgb(96, 108, 56);
   margin-bottom: 0.3rem;
 }
 
-.impressionContainer p {
+.impressionWrapper p {
   hyphens: auto;
 }
 
@@ -83,17 +83,17 @@
   text-align: justify;
 }
 
-.topContainer ul.custom-list {
+.tasksWrapper ul.custom-list {
   list-style: none;
   padding-left: 20px;
 }
 
-.topContainer .custom-list li {
+.tasksWrapper .custom-list li {
   position: relative;
   padding-left: 20px;
 }
 
-.topContainer ul.custom-list li::before {
+.tasksWrapper ul.custom-list li::before {
   content: "";
   position: absolute;
   left: 0;

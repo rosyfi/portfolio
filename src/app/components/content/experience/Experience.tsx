@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import styles from "../../../styles/content/experience/Experience.module.css";
 import JobCard from "./JobCard";
-import cards, { JobCardType, months } from "../data/Experience";
 import TimeLine from "./Timeline";
+
+import cards, { JobCardType, months } from "../data/Experience";
 
 /**
  * Generates a timeline component for the period between the current job and the next job.
@@ -102,7 +103,7 @@ const Experience = () => {
       id="experienceScrollContainer"
     >
       {cards.map((card, i) => (
-        <div className={styles.cardsContainer} key={i}>
+        <div className={styles.cardsContent} key={i}>
           <div
             className={styles.cardsLayout}
             style={{ flexDirection: i % 2 === 0 ? "row" : "row-reverse" }}

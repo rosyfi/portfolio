@@ -3,15 +3,16 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: inherit;
-  overflow-y: scroll;
+  padding-bottom: 30px;
+  overflow-x: hidden;
+}
+
+.cardContent {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .container p {
   font-size: 18px;
-}
-
-.softSkillContainer {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
 }

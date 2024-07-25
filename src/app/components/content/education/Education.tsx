@@ -1,9 +1,11 @@
 import React from "react";
 import styles from "../../../styles/content/education/Education.module.css";
 
+//TODO: Componenten daraus machen, key prop hinzufügen
+
 const Education = () => {
   return (
-    <div className={`container ${styles.container}`}>
+    <div className={`container col-11 ${styles.container}`}>
       <div className={styles.educationContainerUp}>
         <div className={styles.education}>
           <h2 className="degree">High School Diploma</h2>

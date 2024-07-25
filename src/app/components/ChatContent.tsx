@@ -4,7 +4,7 @@ import styles from "../styles/ChatContent.module.css";
 const ChatContent: React.FC = () => {
   const [emailBody, setEmailBody] = useState<string>("");
 
-  // add later: on enter open email window
+  //TODO: on enter open email window
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmailBody(e.target.value);
   };
@@ -23,7 +23,7 @@ const ChatContent: React.FC = () => {
 
   return (
     <div className={`container ${styles.container}`}>
-      <div className={styles.imageContainer}>
+      <div className={styles.imageWrapper}>
         <img
           className={styles.image}
           src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Circle_%28transparent%29.png"
@@ -31,7 +31,7 @@ const ChatContent: React.FC = () => {
         />
       </div>
       <div className="chat-container">
-        <div className={styles.messageContainer}>
+        <div className={styles.messageWrapper}>
           <div className={styles.message}>
             <span>
               Hello I’m{" "}
@@ -48,7 +48,7 @@ const ChatContent: React.FC = () => {
             </span>
           </div>
         </div>
-        <div className={styles.inputContainer}>
+        <div className={styles.inputWrapper}>
           <input
             className={styles.input}
             type="text"

@@ -3,9 +3,9 @@ import styles from "../../../styles/content/about/About.module.css";
 
 const About = ({}) => {
   return (
-    <div className={`container ${styles.container}`}>
+    <div className={`container col-11 ${styles.container}`}>
       <h1>Welcome! </h1>
-      <div className={styles.paragraph}>
+      <div className={styles.content}>
         <p>
           Hi there! I am a passionate
           <span className={styles.span}> software developer</span>. While my

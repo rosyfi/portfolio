@@ -4,8 +4,3 @@
   grid-template-rows: 0fr;
   height: 100%;
 }
-
-.contentContainer {
-  overflow-y: scroll;
-  overflow-x: hidden;
-}

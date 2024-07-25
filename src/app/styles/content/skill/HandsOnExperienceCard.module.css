@@ -11,17 +11,7 @@
   flex: 1.5;
 }
 
-.container h2 {
-  color: rgb(96, 108, 56);
-  font-weight: bold;
-}
-
-.container button {
-  background: none;
-  border: none;
-}
-
-.symbolsContainer {
+.typesWrapper {
   display: flex;
   flex-direction: row;
   gap: 70px;
@@ -29,9 +19,20 @@
   align-items: center;
 }
 
-.symbol {
+.type {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.container h2 {
+  color: rgb(96, 108, 56);
+  font-weight: bold;
+  text-align: center;
+}
+
+.container button {
+  background: none;
+  border: none;
 }

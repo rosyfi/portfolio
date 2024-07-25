@@ -5,10 +5,10 @@ import HardSkillProgressBar from "./HardSkillProgressBar";
 
 const HardSkill = () => {
   return (
-    <div className={`container ${styles.container}`}>
-      <div className={styles.hardSkill}>
+    <div className={`container col-11 ${styles.container}`}>
+      <div className={styles.cardContent}>
         <HardSkillProgressBar title={"Software Development"} percentage={60} />
-        <div className={styles.hardSkillCards}>
+        <div className={styles.cardsWrapper}>
           <HardSkillCard
             title={"Frontend"}
             tools={[
@@ -38,27 +38,32 @@ const HardSkill = () => {
         </div>
       </div>
 
-      <div className={styles.hardSkills}>
-        <div className={styles.hardSkill}>
+      <div className={styles.cardsContent}>
+        <div className={styles.cardContent}>
           <HardSkillProgressBar title={"UX/UI"} percentage={70} />
-          <div className={styles.hardSkillCards}>
+          <div className={styles.cardsWrapper}>
             <HardSkillCard title={"Figma"} tools={[]} />
           </div>
         </div>
-        <div className={styles.hardSkill}>
+        <div className={styles.cardContent}>
           <HardSkillProgressBar title={"Business Analyst"} percentage={80} />
-          <div className={styles.hardSkillCards}>
+          <div className={styles.cardsWrapper}>
             <HardSkillCard title={"BMPN"} tools={[]} />
             <HardSkillCard title={"ERP"} tools={[]} />
           </div>
         </div>
       </div>
 
-      <HardSkillProgressBar title={"Requirements Management"} percentage={90} />
-      <div className={styles.hardSkillCards}>
-        <HardSkillCard title={"Jira"} tools={[]} />
-        <HardSkillCard title={"Confluence"} tools={[]} />
-        <HardSkillCard title={"Scrum"} tools={[]} />
+      <div className={styles.cardContent}>
+        <HardSkillProgressBar
+          title={"Requirements Management"}
+          percentage={90}
+        />
+        <div className={styles.cardsWrapper}>
+          <HardSkillCard title={"Jira"} tools={[]} />
+          <HardSkillCard title={"Confluence"} tools={[]} />
+          <HardSkillCard title={"Scrum"} tools={[]} />
+        </div>
       </div>
     </div>
   );

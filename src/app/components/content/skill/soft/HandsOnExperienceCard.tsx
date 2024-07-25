@@ -36,10 +36,10 @@ const SoftSkillCard: React.FC<SoftSkillsProps> = ({ skills }) => {
       {type === null ? (
         <>
           <h2>Hands-On Experience</h2>
-          <div className={styles.symbolsContainer}>
+          <div className={styles.typesWrapper}>
             {skills[0]?.tasks?.length > 0 && (
               <button
-                className={styles.symbol}
+                className={styles.type}
                 onClick={() => handleButtonClick(0)}
               >
                 <img
@@ -52,7 +52,7 @@ const SoftSkillCard: React.FC<SoftSkillsProps> = ({ skills }) => {
             )}
             {skills[1]?.tasks?.length > 0 && (
               <button
-                className={styles.symbol}
+                className={styles.type}
                 onClick={() => handleButtonClick(1)}
               >
                 <img
@@ -65,7 +65,7 @@ const SoftSkillCard: React.FC<SoftSkillsProps> = ({ skills }) => {
             )}
             {skills[2]?.tasks?.length > 0 && (
               <button
-                className={styles.symbol}
+                className={styles.type}
                 onClick={() => handleButtonClick(2)}
               >
                 <img className={styles.svg} src="/work.svg" alt="work" />

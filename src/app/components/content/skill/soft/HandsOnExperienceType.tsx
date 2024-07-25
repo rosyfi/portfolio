@@ -30,9 +30,9 @@ const HandsOnExperienceType: React.FC<HandsOnExperienceTypeProps> = ({
         <img className={styles.svg} src="arrowLeft.svg" alt="arrowLeft" />
       </button>
 
-      <div className={styles.contentContainer}>
-        <div className={styles.topContainer}>
-          <div className={styles.tasksContainer}>
+      <div className={styles.content}>
+        <div className={styles.topWrapper}>
+          <div className={styles.tasksWrapper}>
             <h2>Tasks</h2>
             <ul className={styles["custom-list"]}>
               {tasks.map((task) => (
@@ -41,18 +41,18 @@ const HandsOnExperienceType: React.FC<HandsOnExperienceTypeProps> = ({
             </ul>
           </div>
 
-          <div className={styles.impressionContainer}>
+          <div className={styles.impressionWrapper}>
             <h2>Impression</h2>
             <p>{impression}</p>
           </div>
         </div>
 
-        <div className={styles.bottomContainer}>
-          <div className={styles.keyTakeawayContainer}>
+        <div className={styles.bottomWrapper}>
+          <div className={styles.keyTakeawayWrapper}>
             <h4>Key Takeaway:</h4>
             <span>{keyTakeaway}</span>
           </div>
-          <div className={styles.placeContainer}>
+          <div className={styles.placeWrapper}>
             <img
               className={styles.placeSymbol}
               src={`${svg}.svg`}
