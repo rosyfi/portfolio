@@ -1,12 +1,10 @@
 import React from "react";
 import styles from "../styles/MenuBar.module.css";
-import SkillsDropdown from "./content/skill/SkillsDropdown";
+import { useRouter } from "next/navigation";
+import SkillsDropdown from "./SkillsDropdown";
 
-interface MenuBarProps {
-  onMenuItemClick: (content: number, path: string) => void;
-}
-
-const MenuBar: React.FC<MenuBarProps> = ({ onMenuItemClick }) => {
+const MenuBar = () => {
+  const router = useRouter();
   return (
     <div className={`container ${styles.container}`}>
       <div className={styles.menuItems}>
@@ -14,7 +12,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ onMenuItemClick }) => {
           type="button"
           className={styles.menuItemButton}
           onClick={() => {
-            onMenuItemClick(1, "rossellafilocomo/about");
+            router.push("/about");
           }}
         >
           <span className={styles.menuItem}>About</span>
@@ -23,7 +21,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ onMenuItemClick }) => {
           type="button"
           className={styles.menuItemButton}
           onClick={() => {
-            onMenuItemClick(2, "rossellafilocomo/education");
+            router.push("/education");
           }}
         >
           <span className={styles.menuItem}>Education</span>
@@ -32,13 +30,13 @@ const MenuBar: React.FC<MenuBarProps> = ({ onMenuItemClick }) => {
           type="button"
           className={styles.menuItemButton}
           onClick={() => {
-            onMenuItemClick(3, "rossellafilocomo/experience");
+            router.push("/experience");
           }}
         >
           <span className={styles.menuItem}>Experience</span>
         </button>
         <div className={styles.menuItemButton}>
-          <SkillsDropdown onMenuItemClick={onMenuItemClick} />
+          <SkillsDropdown />
         </div>
       </div>
     </div>

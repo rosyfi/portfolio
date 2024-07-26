@@ -12,3 +12,10 @@
   gap: inherit;
   overflow: hidden;
 }
+
+.windowWrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-rows: 0fr;
+  height: 100%;
+}

@@ -1,13 +1,13 @@
+"use client ";
 import React, { useState } from "react";
-import styles from "../.././../styles/content/skill/SkillsDropdown.module.css";
-
-interface SkillsDropDownProps {
-  onMenuItemClick: (content: number, path: string) => void;
-}
+import styles from "../styles/SkillsDropdown.module.css";
+import { useRouter } from "next/navigation";
 
 //TODO: Allgemeine componente daraus machen
 
-const SkillsDropDown: React.FC<SkillsDropDownProps> = ({ onMenuItemClick }) => {
+const SkillsDropDown = () => {
+  const router = useRouter();
+
   const [showDropdown, setShowDropdown] = useState(false);
 
   const onMouseEnter = () => {
@@ -32,7 +32,7 @@ const SkillsDropDown: React.FC<SkillsDropDownProps> = ({ onMenuItemClick }) => {
               <button
                 className={styles.dropdownButton}
                 onClick={() => {
-                  onMenuItemClick(4, "rossellafilocomo/hardskills");
+                  router.push("/skills/hard");
                 }}
               >
                 <span className="name">Hard</span>
@@ -42,7 +42,7 @@ const SkillsDropDown: React.FC<SkillsDropDownProps> = ({ onMenuItemClick }) => {
               <button
                 className={styles.dropdownButton}
                 onClick={() => {
-                  onMenuItemClick(5, "rossellafilocomo/softskills");
+                  router.push("/skills/soft");
                 }}
               >
                 <span className="name">Soft</span>
@@ -52,7 +52,7 @@ const SkillsDropDown: React.FC<SkillsDropDownProps> = ({ onMenuItemClick }) => {
               <button
                 className={styles.dropdownButton}
                 onClick={() => {
-                  onMenuItemClick(6, "rossellafilocomo/language");
+                  router.push("/skills/langauge");
                 }}
               >
                 <span className="name">Language</span>

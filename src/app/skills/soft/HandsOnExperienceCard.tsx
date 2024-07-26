@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../../styles/content/skill/HandsOnExperienceCard.module.css";
+import styles from "../../styles/skills/soft/HandsOnExperienceCard.module.css";
 
 interface HandsOnExperienceCardProps {
   tasks: Array<string>;
@@ -27,7 +27,7 @@ const HandsOnExperienceCard: React.FC<HandsOnExperienceCardProps> = ({
   return (
     <div className={styles.container}>
       <button onClick={onPrevious} disabled={disablePrevious}>
-        <img className={styles.svg} src="arrowLeft.svg" alt="arrowLeft" />
+        <img className={styles.svg} src="/arrowLeft.svg" alt="arrowLeft" />
       </button>
 
       <div className={styles.content}>
@@ -55,7 +55,7 @@ const HandsOnExperienceCard: React.FC<HandsOnExperienceCardProps> = ({
           <div className={styles.placeWrapper}>
             <img
               className={styles.placeSymbol}
-              src={`${svg}.svg`}
+              src={`/${svg}.svg`}
               alt={`${svg}`}
             />
             <span>{place}</span>
@@ -64,7 +64,7 @@ const HandsOnExperienceCard: React.FC<HandsOnExperienceCardProps> = ({
       </div>
 
       <button onClick={onNext} disabled={disableNext}>
-        <img className={styles.svg} src="arrowRight.svg" alt="arrowRight" />
+        <img className={styles.svg} src="/arrowRight.svg" alt="arrowRight" />
       </button>
     </div>
   );

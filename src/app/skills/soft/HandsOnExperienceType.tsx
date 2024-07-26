@@ -1,5 +1,6 @@
+"use client";
 import React, { useState } from "react";
-import styles from "../../../../styles/content/skill/HandsOnExperienceType.module.css";
+import styles from "../../styles/skills/soft/HandsOnExperienceType.module.css";
 import HandsOnExperienceCard from "./HandsOnExperienceCard";
 
 interface HandsOnExperienceTypeProps {
@@ -39,11 +40,12 @@ const HandsOnExperienceType: React.FC<HandsOnExperienceTypeProps> = ({
         <>
           <h2>Hands-On Experience</h2>
           <div className={styles.typesWrapper}>
-            {skills.map((skill, index) => {
+            {skills.map((skill, i) => {
               return (
                 <button
                   className={styles.type}
-                  onClick={() => handleButtonClick(index)}
+                  onClick={() => handleButtonClick(i)}
+                  key={i}
                 >
                   <img
                     className={styles.svg}

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../styles/content/experience/Timeline.module.css";
+import styles from "../styles/experience/Timeline.module.css";
 
 import { Month, months } from "../data/Experience";
 

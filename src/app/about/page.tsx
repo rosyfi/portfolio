@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "../../../styles/content/about/About.module.css";
+import styles from "../styles/about/About.module.css";
 
-const About = ({}) => {
+export default function About() {
   return (
     <div className={`container col-11 ${styles.container}`}>
       <h1>Welcome! </h1>
@@ -30,6 +30,4 @@ const About = ({}) => {
       </div>
     </div>
   );
-};
-
-export default About;
+}

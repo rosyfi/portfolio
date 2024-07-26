@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "../../../../styles/content/skill/SoftSkill.module.css";
+import styles from "../../styles/skills/soft/SoftSkill.module.css";
 import HandsOnExpereinceCard from "./HandsOnExperienceType";
 import SoftSkillCard from "./SoftSkillCard";
 
 import softSkills from "../../data/SoftSkill";
 
-const SoftSkill = () => {
+export default function SoftSkill() {
   return (
     <div className={`container col-11 ${styles.container}`}>
       {Object.keys(softSkills).map((key: string, index: number) => (
@@ -35,6 +35,4 @@ const SoftSkill = () => {
       ))}
     </div>
   );
-};
-
-export default SoftSkill;
+}

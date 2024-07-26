@@ -1,5 +1,6 @@
+"use client";
 import React, { useEffect } from "react";
-import styles from "../../../styles/content/experience/Experience.module.css";
+import styles from "../styles/experience/Experience.module.css";
 import JobCard from "./JobCard";
 import TimeLine from "./Timeline";
 
@@ -71,7 +72,7 @@ const timelineUntillNextJob = (currentJob: JobCardType, index: number) => {
   );
 };
 
-const Experience = () => {
+export default function Experience() {
   useEffect(() => {
     const elements = document.querySelectorAll(`.${styles.fadeIn}`);
 
@@ -137,6 +138,4 @@ const Experience = () => {
       ))}
     </div>
   );
-};
-
-export default Experience;
+}

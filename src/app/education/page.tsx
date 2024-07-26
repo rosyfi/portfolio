@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "../../../styles/content/education/Education.module.css";
+import styles from "../styles/education/Education.module.css";
 
 //TODO: Componenten daraus machen, key prop hinzufügen
 
-const Education = () => {
+export default function Education() {
   return (
     <div className={`container col-11 ${styles.container}`}>
       <div className={styles.educationContainerUp}>
@@ -85,6 +85,4 @@ const Education = () => {
       </div>
     </div>
   );
-};
-
-export default Education;
+}

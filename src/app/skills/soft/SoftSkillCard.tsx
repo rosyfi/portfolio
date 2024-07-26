@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../../styles/content/skill/SoftSkillCard.module.css";
+import styles from "../../styles/skills/soft/SoftSkillCard.module.css";
 
 interface SoftSkillCardProp {
   title: string;

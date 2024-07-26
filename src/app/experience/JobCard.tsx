@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../../styles/content/experience/JobCard.module.css";
+import styles from "../styles/experience/JobCard.module.css";
 
 interface JobCardProps {
   title: string;

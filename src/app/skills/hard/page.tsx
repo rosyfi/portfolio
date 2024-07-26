@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "../../../../styles/content/skill/HardSkill.module.css";
+import styles from "../../styles/skills/hard/HardSkill.module.css";
 import HardSkillCard from "./HardSkillCard";
 import HardSkillProgressBar from "./HardSkillProgressBar";
 
-const HardSkill = () => {
+export default function HardSkill() {
   return (
     <div className={`container col-11 ${styles.container}`}>
       <div className={styles.cardContent}>
@@ -67,6 +67,4 @@ const HardSkill = () => {
       </div>
     </div>
   );
-};
-
-export default HardSkill;
+}
