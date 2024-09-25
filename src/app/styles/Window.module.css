@@ -12,7 +12,7 @@
   overflow-x: hidden;
 
   height: 100%;
-  background-image: url("/background.svg");
+  background-image: url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='utf-8'?><svg width='396'height='378'viewBox='0 0 396 378'fill='none'xmlns='http://www.w3.org/2000/svg'><path d='M219 104.5C219 162.214 169.975 209 109.5 209C49.0248 209 0 162.214 0 104.5C0 46.7862 49.0248 0 109.5 0C169.975 0 219 46.7862 219 104.5Z' fill='#BEC5A4'/><path d='M396 207C396 264.99 346.751 312 286 312C225.249 312 176 264.99 176 207C176 149.01 225.249 102 286 102C346.751 102 396 149.01 396 207Z' fill='#BEC5A4'/><path d='M241 312C241 348.451 210.108 378 172 378C133.892 378 103 348.451 103 312C103 275.549 133.892 246 172 246C210.108 246 241 275.549 241 312Z' fill='#BEC5A4'/></svg>");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
