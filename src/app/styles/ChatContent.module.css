@@ -46,7 +46,10 @@
 }
 
 .image {
+  position: relative;
   width: 200px;
+  border: 1px black solid;
+  border-radius: 50%;
 }
 
 .gif {

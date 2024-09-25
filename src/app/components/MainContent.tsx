@@ -32,7 +32,7 @@ const MainContent: React.FC<MainContentProps> = ({ onPathChange }) => {
       case 5:
         return <SoftSkill />;
       case 6:
-        return <div>Content 6???????</div>;
+        return <div style={{ textAlign: "center" }}>Under construction :)</div>;
       default:
         break;
     }

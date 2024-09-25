@@ -24,11 +24,7 @@ const ChatContent: React.FC = () => {
   return (
     <div className={`container ${styles.container}`}>
       <div className={styles.imageWrapper}>
-        <img
-          className={styles.image}
-          src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Circle_%28transparent%29.png"
-          alt=""
-        />
+        <img className={styles.image} src="/picture.png" alt="picture" />
       </div>
       <div className="chat-container">
         <div className={styles.messageWrapper}>
