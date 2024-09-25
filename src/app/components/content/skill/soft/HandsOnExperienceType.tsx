@@ -44,6 +44,7 @@ const HandsOnExperienceType: React.FC<HandsOnExperienceTypeProps> = ({
                 <button
                   className={styles.type}
                   onClick={() => handleButtonClick(index)}
+                  key={index}
                 >
                   <img
                     className={styles.svg}

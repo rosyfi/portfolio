@@ -37,8 +37,8 @@ const Education = () => {
         </div>
       </div>
       <div className={styles.timeLineContainer}>
-        {Array.from({ length: 20 }).map((_) => (
-          <div className={styles.timeLine}></div>
+        {Array.from({ length: 20 }).map((_, i) => (
+          <div className={styles.timeLine} key={i}></div>
         ))}
       </div>
       <div className={styles.educationContainerDown}>
