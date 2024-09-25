@@ -11,7 +11,7 @@ const WindowBar: React.FC<WindowBarProps> = ({ path }) => {
       <div className="row flex-nowrap">
         <div className="col">
           <img
-            src="/windowBarButtons.svg"
+            src="./windowBarButtons.svg"
             alt="Window bar buttons"
             className="windowBarButtons"
           />

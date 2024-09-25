@@ -24,7 +24,7 @@ const ChatContent: React.FC = () => {
   return (
     <div className={`container ${styles.container}`}>
       <div className={styles.imageWrapper}>
-        <img className={styles.image} src="/picture.png" alt="picture" />
+        <img className={styles.image} src="./picture.png" alt="picture" />
       </div>
       <div className="chat-container">
         <div className={styles.messageWrapper}>
@@ -35,7 +35,7 @@ const ChatContent: React.FC = () => {
               software developer.
             </span>
           </div>
-          <img className={styles.gif} src="/cat.gif" alt="Cat GIF" />
+          <img className={styles.gif} src="./cat.gif" alt="Cat GIF" />
           <div className={styles.message}>
             <span>
               Thanks for stopping by my site! If you have any questions or want
@@ -54,7 +54,7 @@ const ChatContent: React.FC = () => {
           />
           <button className={styles.enterButton} onClick={openEmail}>
             <img
-              src="/enterButton.svg"
+              src="./enterButton.svg"
               alt="enter button"
               className="enterButton"
             />

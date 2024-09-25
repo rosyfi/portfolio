@@ -14,7 +14,7 @@ const Education = () => {
           </div>
           <h2 className={styles.time}>2014 - 2017</h2>
           <img
-            src="/timeLinePointDown.svg"
+            src="./timeLinePointDown.svg"
             alt="Time line point down"
             className="timeLinePointDown"
           />
@@ -30,7 +30,7 @@ const Education = () => {
             August 2020 - <br /> December 2020
           </h2>
           <img
-            src="/timeLinePointDown.svg"
+            src="./timeLinePointDown.svg"
             alt="Time line point down"
             className="timeLinePointDown"
           />
@@ -44,7 +44,7 @@ const Education = () => {
       <div className={styles.educationContainerDown}>
         <div className={styles.education}>
           <img
-            src="/timeLinePointUp.svg"
+            src="./timeLinePointUp.svg"
             alt="Time line point up"
             className="timeLinePointUp"
           />
@@ -56,7 +56,7 @@ const Education = () => {
         </div>
         <div className={styles.education}>
           <img
-            src="/timeLinePointUp.svg"
+            src="./timeLinePointUp.svg"
             alt="Time line point up"
             className="timeLinePointUp"
           />
@@ -70,7 +70,7 @@ const Education = () => {
         </div>
         <div className={styles.education}>
           <img
-            src="/timeLinePointUp.svg"
+            src="./timeLinePointUp.svg"
             alt="Time line point up"
             className="timeLinePointUp"
           />

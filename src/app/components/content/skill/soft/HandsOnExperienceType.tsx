@@ -48,7 +48,7 @@ const HandsOnExperienceType: React.FC<HandsOnExperienceTypeProps> = ({
                 >
                   <img
                     className={styles.svg}
-                    src={`/${skill.svg}.svg`}
+                    src={`./${skill.svg}.svg`}
                     alt={skill.place}
                   />
                   <span>{skill.place}</span>
