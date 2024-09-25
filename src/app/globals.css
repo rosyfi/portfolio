@@ -31,12 +31,10 @@ body {
 
 h1 {
   font-family: var(--font-heading);
-  font-size: 40px;
 }
 
 h2 {
   font-family: var(--font-heading);
-  font-size: 20px;
 }
 
 p {
