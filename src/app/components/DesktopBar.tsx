@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import styles from "../styles/LaptopMenuBar.module.css";
+import styles from "../styles/DesktopBar.module.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-const LaptopMenuBar = () => {
+const DesktopBar = () => {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -39,4 +39,4 @@ const LaptopMenuBar = () => {
   );
 };
 
-export default LaptopMenuBar;
+export default DesktopBar;
