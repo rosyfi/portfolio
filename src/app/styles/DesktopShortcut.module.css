@@ -10,14 +10,14 @@
   background-color: rgb(247, 246, 246, 0.7);
   border: 2px solid rgba(174, 171, 171, 0.7);
 }
-/* 
-.container:hover i {
-  background-color: blueviolet;
-  color: wheat;
-} */
 
 .logo {
   width: 105px;
   padding: 7px 20px 5px 20px;
   border-radius: 10px;
+}
+
+.button {
+  background: none;
+  border: none;
 }

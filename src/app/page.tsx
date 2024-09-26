@@ -13,6 +13,7 @@ import DesktopShortcut from "./components/DesktopShortcut";
 export default function Home() {
   const [path, setPath] = useState<string>("rossellafilocomo/about");
   const [chatPath] = useState<string>("rossellafilocomo/contact");
+  const [currentContent, setCurrentContent] = useState<number>(1);
 
   return (
     <main className={styles.main}>
@@ -22,21 +23,41 @@ export default function Home() {
           <ChatContent />
         </Window> */}
         <Window path={path}>
-          <MainContent onPathChange={setPath} />
+          <MainContent
+            onPathChange={setPath}
+            currentContent={currentContent}
+            setCurrentContent={setCurrentContent}
+          />
         </Window>
         <div className={styles.shortcutContainer}>
           <DesktopShortcut
             name={"LinkedIn"}
             link={"https://www.linkedin.com/in/rossellafilocomo/"}
             logo="linkedIn"
+            href
           />
           <DesktopShortcut
             name={"GitHub"}
             link={"https://github.com/rosyfi"}
             logo="github"
+            href
           />
-          <DesktopShortcut name={"CV"} link={"filename"} logo="cv" />
-          <DesktopShortcut name={"My Page"} link={"startseite"} logo="web" />
+          <DesktopShortcut
+            name={"CV"}
+            link={"filename"}
+            logo="cv"
+            setCurrentContent={() => {
+              setCurrentContent(7);
+            }}
+          />
+          <DesktopShortcut
+            name={"My Page"}
+            link={"startseite"}
+            logo="web"
+            setCurrentContent={() => {
+              setCurrentContent(1);
+            }}
+          />
         </div>
       </div>
     </main>

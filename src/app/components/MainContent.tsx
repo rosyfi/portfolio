@@ -8,12 +8,16 @@ import HardSkill from "./content/skill/hard/HardSkill";
 import SoftSkill from "./content/skill/soft/SoftSkill";
 
 interface MainContentProps {
+  currentContent: number;
+  setCurrentContent: (content: number) => void;
   onPathChange: (path: string) => void;
 }
 
-const MainContent: React.FC<MainContentProps> = ({ onPathChange }) => {
-  const [currentContent, setCurrentContent] = useState<number>(1);
-
+const MainContent: React.FC<MainContentProps> = ({
+  onPathChange,
+  currentContent,
+  setCurrentContent,
+}) => {
   const handleMenuItemClick = (newContent: number, newPath: string) => {
     setCurrentContent(newContent);
     onPathChange(newPath);
@@ -33,6 +37,12 @@ const MainContent: React.FC<MainContentProps> = ({ onPathChange }) => {
         return <SoftSkill />;
       case 6:
         return <div style={{ textAlign: "center" }}>Under construction :)</div>;
+      case 7:
+        return (
+          <div style={{ textAlign: "center" }}>
+            CV Download Under construction :)
+          </div>
+        );
       default:
         break;
     }
