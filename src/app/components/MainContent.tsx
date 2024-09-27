@@ -6,6 +6,7 @@ import Education from "./content/education/Education";
 import Experience from "./content/experience/Experience";
 import HardSkill from "./content/skill/hard/HardSkill";
 import SoftSkill from "./content/skill/soft/SoftSkill";
+import Resume from "./content/resume/Resume";
 
 interface MainContentProps {
   currentContent: number;
@@ -38,11 +39,7 @@ const MainContent: React.FC<MainContentProps> = ({
       case 6:
         return <div style={{ textAlign: "center" }}>Under construction :)</div>;
       case 7:
-        return (
-          <div style={{ textAlign: "center" }}>
-            CV Download Under construction :)
-          </div>
-        );
+        return <Resume />;
       default:
         break;
     }
@@ -50,7 +47,7 @@ const MainContent: React.FC<MainContentProps> = ({
 
   return (
     <div className={styles.container}>
-      <MenuBar onMenuItemClick={handleMenuItemClick} />
+      {currentContent != 7 && <MenuBar onMenuItemClick={handleMenuItemClick} />}
       {renderContent()}
     </div>
   );
