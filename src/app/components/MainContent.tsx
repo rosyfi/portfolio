@@ -47,7 +47,9 @@ const MainContent: React.FC<MainContentProps> = ({
 
   return (
     <div className={styles.container}>
-      {currentContent != 7 && <MenuBar onMenuItemClick={handleMenuItemClick} />}
+      {currentContent != 7 && currentContent != 1 && (
+        <MenuBar onMenuItemClick={handleMenuItemClick} />
+      )}
       {renderContent()}
     </div>
   );

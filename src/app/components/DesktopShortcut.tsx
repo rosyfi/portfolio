@@ -7,6 +7,7 @@ interface DesktopShortcutProp {
   logo: string;
   href?: boolean;
   setCurrentContent?: () => void;
+  setPath?: () => void;
 }
 const DesktopShortcut: React.FC<DesktopShortcutProp> = ({
   name,
@@ -14,6 +15,7 @@ const DesktopShortcut: React.FC<DesktopShortcutProp> = ({
   logo,
   href = false,
   setCurrentContent = () => {},
+  setPath = () => {},
 }) => {
   return (
     <>
@@ -29,6 +31,7 @@ const DesktopShortcut: React.FC<DesktopShortcutProp> = ({
           className={styles.button}
           onClick={() => {
             setCurrentContent();
+            setPath();
           }}
         >
           <div className={styles.container}>

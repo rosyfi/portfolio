@@ -10,7 +10,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ onMenuItemClick }) => {
   return (
     <div className={`container ${styles.container}`}>
       <div className={styles.menuItems}>
-        <button
+        {/* <button
           type="button"
           className={styles.menuItemButton}
           onClick={() => {
@@ -18,7 +18,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ onMenuItemClick }) => {
           }}
         >
           <span className={styles.menuItem}>About</span>
-        </button>
+        </button> */}
         <button
           type="button"
           className={styles.menuItemButton}
