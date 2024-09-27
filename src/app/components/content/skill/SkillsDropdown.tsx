@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "../.././../styles/content/skill/SkillsDropdown.module.css";
 
 interface SkillsDropDownProps {
-  onMenuItemClick: (content: number, path: string) => void;
+  onMenuItemClick: (content: number) => void;
 }
 
 //TODO: Allgemeine componente daraus machen
@@ -32,7 +32,7 @@ const SkillsDropDown: React.FC<SkillsDropDownProps> = ({ onMenuItemClick }) => {
               <button
                 className={styles.dropdownButton}
                 onClick={() => {
-                  onMenuItemClick(4, "rossellafilocomo/hardskills");
+                  onMenuItemClick(4);
                 }}
               >
                 <span className="name">Hard</span>
@@ -42,7 +42,7 @@ const SkillsDropDown: React.FC<SkillsDropDownProps> = ({ onMenuItemClick }) => {
               <button
                 className={styles.dropdownButton}
                 onClick={() => {
-                  onMenuItemClick(5, "rossellafilocomo/softskills");
+                  onMenuItemClick(5);
                 }}
               >
                 <span className="name">Soft</span>
@@ -52,7 +52,7 @@ const SkillsDropDown: React.FC<SkillsDropDownProps> = ({ onMenuItemClick }) => {
               <button
                 className={styles.dropdownButton}
                 onClick={() => {
-                  onMenuItemClick(6, "rossellafilocomo/language");
+                  onMenuItemClick(6);
                 }}
               >
                 <span className="name">Language</span>

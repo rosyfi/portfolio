@@ -1,34 +1,46 @@
-import React, { useEffect, useState } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import styles from "../styles/ChatContent.module.css";
 
 const messages = [
-  "Hello I’m Rossella Filocomo, a software developer",
-  "Thanks for stopping by my site! On the right side you can look at my website. Just click on 'My Page' and you will see my education, expierences and skills.",
-  "If you have any questions or want to discuss opportunities, feel free to come back to this chat message and write to me back below. Looking forward to chatting with you! :)",
+  <div>Hi there!</div>,
+  <img className={styles.gif} src="./cat.gif" alt="Cat GIF" />,
+  <div>
+    Hello I’m <span className={styles.spanBold}>Rossella Filocomo</span>, a
+    software developer.
+  </div>,
+  <div>
+    Thanks for stopping by my site! On the right side you can look at my
+    website. Just click on "My Page" and you will see my education, expierences
+    and skills.
+  </div>,
+  <div>
+    If you have any questions or want to discuss opportunities, feel free to
+    come back to this chat and write to me back below. Looking forward to
+    chatting with you! :)
+  </div>,
 ];
 
-const ChatMessage: React.FC<{ message: string }> = ({ message }) => {
+const ChatMessage: React.FC<{ message: React.JSX.Element }> = ({ message }) => {
+  if (message.type === "img") return message;
   return <div className={styles.message}>{message}</div>;
 };
 
 const TypingIndicator: React.FC = () => {
-  const [dotCount, setDotCount] = useState(1);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setDotCount((prevCount) => (prevCount === 3 ? 1 : prevCount + 1));
-    }, 500);
-
-    return () => clearInterval(intervalId);
-  }, []);
-
-  return <div className="typing-indicator">{".".repeat(dotCount)}</div>;
+  return (
+    <div className={styles.dotsContainer}>
+      <div className={styles.dot}></div>
+      <div className={styles.dot}></div>
+      <div className={styles.dot}></div>
+    </div>
+  );
 };
 
 const ChatContent: React.FC = () => {
   const [emailBody, setEmailBody] = useState<string>("");
 
-  const [visibleMessages, setVisibleMessages] = useState<string[]>([]);
+  const [visibleMessages, setVisibleMessages] = useState<React.JSX.Element[]>(
+    []
+  );
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
 
   const [isTyping, setIsTyping] = useState(false);
@@ -66,23 +78,38 @@ const ChatContent: React.FC = () => {
   }, []);
 
   useEffect(() => {
+    // Only run if there are still messages to display
     if (currentMessageIndex < messages.length) {
-      setIsTyping(true);
-      const typingTimeoutId = setTimeout(() => {
-        setIsTyping(false);
-        const messageTimeoutId = setTimeout(() => {
-          setVisibleMessages((prevMessages) => [
-            ...prevMessages,
-            messages[currentMessageIndex],
-          ]);
-          setCurrentMessageIndex((prevIndex) => prevIndex + 1);
-        }, 2000);
+      // Delay before typing starts
+      const initialDelay = setTimeout(() => {
+        setIsTyping(true);
 
-        return () => clearTimeout(messageTimeoutId);
-      }, 2000);
+        // Delay for typing animation
+        const typingTimeoutId = setTimeout(() => {
+          setIsTyping(false);
 
-      return () => clearTimeout(typingTimeoutId);
+          // Delay for showing the message after typing ends
+          const messageTimeoutId = setTimeout(() => {
+            setVisibleMessages((prevMessages) => [
+              ...prevMessages,
+              messages[currentMessageIndex],
+            ]);
+            setCurrentMessageIndex((prevIndex) => prevIndex + 1);
+          }, 1000); // Delay for message appearance
+
+          // Clean up the messageTimeoutId
+          return () => clearTimeout(messageTimeoutId);
+        }, 2000); // Duration of typing animation
+
+        // Clean up the typingTimeoutId
+        return () => clearTimeout(typingTimeoutId);
+      }, 1500); // Initial delay before typing starts
+
+      // Clean up the initialDelay
+      return () => clearTimeout(initialDelay);
     }
+
+    // Ensure that typing stops when no messages are left
     setIsTyping(false);
   }, [currentMessageIndex]);
 
@@ -104,11 +131,11 @@ const ChatContent: React.FC = () => {
           {visibleMessages.map((message, index) => (
             <ChatMessage key={index} message={message} /> // Render each message as its own component
           ))}
-          {isTyping && <TypingIndicator />}
           {/* 
           <img className={styles.gif} src="./cat.gif" alt="Cat GIF" />
            */}
         </div>
+        {isTyping && <TypingIndicator />}
         <div className={styles.inputWrapper}>
           <input
             className={styles.input}

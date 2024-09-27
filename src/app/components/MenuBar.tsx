@@ -3,7 +3,7 @@ import styles from "../styles/MenuBar.module.css";
 import SkillsDropdown from "./content/skill/SkillsDropdown";
 
 interface MenuBarProps {
-  onMenuItemClick: (content: number, path: string) => void;
+  onMenuItemClick: (content: number) => void;
 }
 
 const MenuBar: React.FC<MenuBarProps> = ({ onMenuItemClick }) => {
@@ -23,7 +23,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ onMenuItemClick }) => {
           type="button"
           className={styles.menuItemButton}
           onClick={() => {
-            onMenuItemClick(2, "rossellafilocomo/education");
+            onMenuItemClick(2);
           }}
         >
           <span className={styles.menuItem}>Education</span>
@@ -32,7 +32,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ onMenuItemClick }) => {
           type="button"
           className={styles.menuItemButton}
           onClick={() => {
-            onMenuItemClick(3, "rossellafilocomo/experience");
+            onMenuItemClick(3);
           }}
         >
           <span className={styles.menuItem}>Experience</span>

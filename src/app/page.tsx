@@ -11,9 +11,7 @@ import ChatContent from "./components/ChatContent";
 import DesktopShortcut from "./components/DesktopShortcut";
 
 export default function Home() {
-  const [path, setPath] = useState<string>("rossellafilocomo/about");
-  const [chatPath] = useState<string>("rossellafilocomo/contact");
-  const [resumePath] = useState<string>("rossellafilocomo/resume");
+  const [path, setPath] = useState<string>("rossellafilocomo/contact");
   const [currentContent, setCurrentContent] = useState<number>(1);
 
   return (
@@ -49,7 +47,6 @@ export default function Home() {
             logo="cv"
             setCurrentContent={() => {
               setCurrentContent(7);
-              setPath(resumePath);
             }}
           />
           <DesktopShortcut
@@ -66,7 +63,6 @@ export default function Home() {
             logo="test"
             setCurrentContent={() => {
               setCurrentContent(1);
-              setPath(chatPath);
             }}
           />
         </div>
