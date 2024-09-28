@@ -51,7 +51,7 @@ const Education = () => {
           <h2 className={styles.time}>2008 - 2014</h2>
           <h2 className="degree">Realschulabschluss</h2>
           <div className="place">
-            Brüder-Grimm-schule <br /> Frankfurt am Main, Germany
+            Brüder-Grimm-Schule <br /> Frankfurt am Main, Germany
           </div>
         </div>
         <div className={styles.education}>

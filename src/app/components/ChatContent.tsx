@@ -5,8 +5,8 @@ const messages = [
   <div>Hi there!</div>,
   <img className={styles.gif} src="./cat.gif" alt="Cat GIF" />,
   <div>
-    Hello I’m <span className={styles.spanBold}>Rossella Filocomo</span>, a
-    software developer.
+    I’m <span className={styles.spanBold}>Rossella Filocomo</span>, a software
+    developer.
   </div>,
   <div>
     Thanks for stopping by my site! On the right side you can look at my
