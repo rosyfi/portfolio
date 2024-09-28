@@ -29,42 +29,46 @@ export default function Home() {
           />
         </Window>
         <div className={styles.shortcutContainer}>
-          <DesktopShortcut
-            name={"LinkedIn"}
-            link={"https://www.linkedin.com/in/rossellafilocomo/"}
-            logo="linkedIn"
-            href
-          />
-          <DesktopShortcut
-            name={"GitHub"}
-            link={"https://github.com/rosyfi"}
-            logo="github"
-            href
-          />
-          <DesktopShortcut
-            name={"CV"}
-            link={"filename"}
-            logo="cv"
-            setCurrentContent={() => {
-              setCurrentContent(7);
-            }}
-          />
-          <DesktopShortcut
-            name={"My Page"}
-            link={"startseite"}
-            logo="web"
-            setCurrentContent={() => {
-              setCurrentContent(2);
-            }}
-          />
-          <DesktopShortcut
-            name={"Chat"}
-            link={"Chat"}
-            logo="test"
-            setCurrentContent={() => {
-              setCurrentContent(1);
-            }}
-          />
+          <div className={styles.websitesShortcutContainer}>
+            <DesktopShortcut
+              name={"LinkedIn"}
+              link={"https://www.linkedin.com/in/rossellafilocomo/"}
+              logo="linkedIn"
+              href
+            />
+            <DesktopShortcut
+              name={"GitHub"}
+              link={"https://github.com/rosyfi"}
+              logo="github"
+              href
+            />
+            <DesktopShortcut
+              name={"CV"}
+              link={"filename"}
+              logo="cv"
+              setCurrentContent={() => {
+                setCurrentContent(7);
+              }}
+            />
+            <DesktopShortcut
+              name={"My Page"}
+              link={"frontpage"}
+              logo="web"
+              setCurrentContent={() => {
+                setCurrentContent(2);
+              }}
+            />
+          </div>
+          <div className="chatShortcutContainer">
+            <DesktopShortcut
+              name={"Chat"}
+              link={"Chat"}
+              logo="chat"
+              setCurrentContent={() => {
+                setCurrentContent(1);
+              }}
+            />
+          </div>
         </div>
       </div>
     </main>

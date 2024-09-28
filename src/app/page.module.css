@@ -16,6 +16,12 @@
 .shortcutContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+}
+
+.websitesShortcutContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 30px;
 }
