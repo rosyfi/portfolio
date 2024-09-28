@@ -7,7 +7,6 @@ import styles from "./page.module.css";
 import DesktopBar from "./components/DesktopBar";
 import Window from "./components/Window";
 import MainContent from "./components/MainContent";
-import ChatContent from "./components/ChatContent";
 import DesktopShortcut from "./components/DesktopShortcut";
 
 export default function Home() {
@@ -18,9 +17,6 @@ export default function Home() {
     <main className={styles.main}>
       <DesktopBar />
       <div className={styles.windowsContainer}>
-        {/* <Window path={chatPath}>
-          <ChatContent />
-        </Window> */}
         <Window path={path}>
           <MainContent
             onPathChange={setPath}

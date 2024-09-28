@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../../../styles/content/skill/HandsOnExperienceType.module.css";
 import HandsOnExperienceCard from "./HandsOnExperienceCard";
+import Image from "next/image";
 
 interface HandsOnExperienceTypeProps {
   skills: {
@@ -46,7 +47,9 @@ const HandsOnExperienceType: React.FC<HandsOnExperienceTypeProps> = ({
                   onClick={() => handleButtonClick(index)}
                   key={index}
                 >
-                  <img
+                  <Image
+                    width={"87"}
+                    height={"65"}
                     className={styles.svg}
                     src={`./${skill.svg}.svg`}
                     alt={skill.place}

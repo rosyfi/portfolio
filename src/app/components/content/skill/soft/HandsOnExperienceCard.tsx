@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../../../styles/content/skill/HandsOnExperienceCard.module.css";
+import Image from "next/image";
 
 interface HandsOnExperienceCardProps {
   tasks: Array<string>;
@@ -27,7 +28,13 @@ const HandsOnExperienceCard: React.FC<HandsOnExperienceCardProps> = ({
   return (
     <div className={styles.container}>
       <button onClick={onPrevious} disabled={disablePrevious}>
-        <img className={styles.svg} src="arrowLeft.svg" alt="arrowLeft" />
+        <Image
+          width={"19"}
+          height={"34"}
+          className={styles.svg}
+          src="arrowLeft.svg"
+          alt="arrowLeft"
+        />
       </button>
 
       <div className={styles.content}>
@@ -53,7 +60,9 @@ const HandsOnExperienceCard: React.FC<HandsOnExperienceCardProps> = ({
             <span>{keyTakeaway}</span>
           </div>
           <div className={styles.placeWrapper}>
-            <img
+            <Image
+              width={"87"}
+              height={"65"}
               className={styles.placeSymbol}
               src={`${svg}.svg`}
               alt={`${svg}`}
@@ -64,7 +73,13 @@ const HandsOnExperienceCard: React.FC<HandsOnExperienceCardProps> = ({
       </div>
 
       <button onClick={onNext} disabled={disableNext}>
-        <img className={styles.svg} src="arrowRight.svg" alt="arrowRight" />
+        <Image
+          width={"19"}
+          height={"34"}
+          className={styles.svg}
+          src="arrowRight.svg"
+          alt="arrowRight"
+        />
       </button>
     </div>
   );

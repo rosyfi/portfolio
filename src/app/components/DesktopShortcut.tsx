@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/DesktopShortcut.module.css";
+import Image from "next/image";
 
 interface DesktopShortcutProp {
   name: string;
@@ -20,7 +21,13 @@ const DesktopShortcut: React.FC<DesktopShortcutProp> = ({
       {(href && (
         <a href={link} target="_blank">
           <div className={styles.container}>
-            <img className={styles.logo} src={`${logo}.svg`} alt={logo} />
+            <Image
+              width={"100"}
+              height={"100"}
+              className={styles.logo}
+              src={`${logo}.svg`}
+              alt={logo}
+            />
             <i className="bi bi-box-arrow-up-right">{name}</i>
           </div>
         </a>
@@ -32,7 +39,13 @@ const DesktopShortcut: React.FC<DesktopShortcutProp> = ({
           }}
         >
           <div className={styles.container}>
-            <img className={styles.logo} src={`${logo}.svg`} alt={logo} />
+            <Image
+              width={"100"}
+              height={"100"}
+              className={styles.logo}
+              src={`${logo}.svg`}
+              alt={logo}
+            />
             <span>{name}</span>
           </div>
         </button>

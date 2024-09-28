@@ -10,15 +10,6 @@ const MenuBar: React.FC<MenuBarProps> = ({ onMenuItemClick }) => {
   return (
     <div className={`container ${styles.container}`}>
       <div className={styles.menuItems}>
-        {/* <button
-          type="button"
-          className={styles.menuItemButton}
-          onClick={() => {
-            onMenuItemClick(1, "rossellafilocomo/about");
-          }}
-        >
-          <span className={styles.menuItem}>About</span>
-        </button> */}
         <button
           type="button"
           className={styles.menuItemButton}

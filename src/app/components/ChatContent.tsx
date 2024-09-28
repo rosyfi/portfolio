@@ -1,19 +1,27 @@
-import React, { ReactElement, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/ChatContent.module.css";
+import Image from "next/image";
 
 const messages = [
-  <div>Hi there!</div>,
-  <img className={styles.gif} src="./cat.gif" alt="Cat GIF" />,
-  <div>
+  <div key={0}>Hi there!</div>,
+  <Image
+    width={"100"}
+    height={"100"}
+    key={1}
+    className={styles.gif}
+    src="/cat.gif"
+    alt="Cat GIF"
+  />,
+  <div key={2}>
     I’m <span className={styles.spanBold}>Rossella Filocomo</span>, a software
     developer.
   </div>,
-  <div>
+  <div key={3}>
     Thanks for stopping by my site! On the right side you can look at my
-    website. Just click on "My Page" and you will see my education, expierences
-    and skills.
+    website. Just click on &quot;My Page&quot; and you will see my education,
+    expierences and skills.
   </div>,
-  <div>
+  <div key={4}>
     If you have any questions or want to discuss opportunities, feel free to
     come back to this chat and write to me back below. Looking forward to
     chatting with you! :)
@@ -21,7 +29,7 @@ const messages = [
 ];
 
 const ChatMessage: React.FC<{ message: React.JSX.Element }> = ({ message }) => {
-  if (message.type === "img") return message;
+  if (message.type === Image) return message;
   return <div className={styles.message}>{message}</div>;
 };
 
@@ -78,38 +86,30 @@ const ChatContent: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    // Only run if there are still messages to display
     if (currentMessageIndex < messages.length) {
-      // Delay before typing starts
       const initialDelay = setTimeout(() => {
         setIsTyping(true);
 
-        // Delay for typing animation
         const typingTimeoutId = setTimeout(() => {
           setIsTyping(false);
 
-          // Delay for showing the message after typing ends
           const messageTimeoutId = setTimeout(() => {
             setVisibleMessages((prevMessages) => [
               ...prevMessages,
               messages[currentMessageIndex],
             ]);
             setCurrentMessageIndex((prevIndex) => prevIndex + 1);
-          }, 1000); // Delay for message appearance
+          }, 1000);
 
-          // Clean up the messageTimeoutId
           return () => clearTimeout(messageTimeoutId);
-        }, 2000); // Duration of typing animation
+        }, 2000);
 
-        // Clean up the typingTimeoutId
         return () => clearTimeout(typingTimeoutId);
-      }, 1500); // Initial delay before typing starts
+      }, 1500);
 
-      // Clean up the initialDelay
       return () => clearTimeout(initialDelay);
     }
 
-    // Ensure that typing stops when no messages are left
     setIsTyping(false);
   }, [currentMessageIndex]);
 
@@ -124,16 +124,19 @@ const ChatContent: React.FC = () => {
   return (
     <div className={`container ${styles.container}`}>
       <div className={styles.imageWrapper}>
-        <img className={styles.image} src="./picture.png" alt="picture" />
+        <Image
+          width={"200"}
+          height={"200"}
+          className={styles.image}
+          src="/picture.png"
+          alt="picture"
+        />
       </div>
       <div className="chat-container">
         <div className={styles.messageWrapper}>
           {visibleMessages.map((message, index) => (
-            <ChatMessage key={index} message={message} /> // Render each message as its own component
+            <ChatMessage key={index} message={message} />
           ))}
-          {/* 
-          <img className={styles.gif} src="./cat.gif" alt="Cat GIF" />
-           */}
         </div>
         {isTyping && <TypingIndicator />}
         <div className={styles.inputWrapper}>
@@ -145,7 +148,9 @@ const ChatContent: React.FC = () => {
             placeholder="Write me your message.."
           />
           <button className={styles.enterButton} onClick={openEmail}>
-            <img
+            <Image
+              width={"42"}
+              height={"42"}
               src="./enterButton.svg"
               alt="enter button"
               className="enterButton"

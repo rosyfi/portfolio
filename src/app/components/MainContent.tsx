@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import styles from "../styles/MainContent.module.css";
 import MenuBar from "./MenuBar";
 import About from "./content/about/About";

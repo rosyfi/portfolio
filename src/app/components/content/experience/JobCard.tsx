@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../../styles/content/experience/JobCard.module.css";
+import Image from "next/image";
 
 interface JobCardProps {
   title: string;
@@ -28,7 +29,13 @@ const JobCard: React.FC<JobCardProps> = ({
         <i className={`bi bi-geo-alt-fill ${styles.locationIcon}`}>
           <span className={styles.locationName}>{location}</span>
         </i>
-        <img src={logo} alt={`${logo} logo`} className={styles.logo} />
+        <Image
+          width={"100"}
+          height={"100"}
+          src={`/logo/${logo}.png`}
+          alt={logo}
+          className={styles.logo}
+        />
       </div>
     </div>
   );

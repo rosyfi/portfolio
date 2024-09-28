@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../../styles/content/education/Education.module.css";
+import Image from "next/image";
 
 //TODO: Componenten daraus machen, key prop hinzufügen
 
@@ -13,7 +14,9 @@ const Education = () => {
             Max-Beckmann-Schule <br /> Frankfurt am Main, Germany
           </div>
           <h2 className={styles.time}>2014 - 2017</h2>
-          <img
+          <Image
+            width={"39"}
+            height={"89"}
             src="./timeLinePointDown.svg"
             alt="Time line point down"
             className="timeLinePointDown"
@@ -29,7 +32,9 @@ const Education = () => {
           <h2 className={styles.time}>
             August 2020 - <br /> December 2020
           </h2>
-          <img
+          <Image
+            width={"39"}
+            height={"89"}
             src="./timeLinePointDown.svg"
             alt="Time line point down"
             className="timeLinePointDown"
@@ -43,7 +48,9 @@ const Education = () => {
       </div>
       <div className={styles.educationContainerDown}>
         <div className={styles.education}>
-          <img
+          <Image
+            width={"39"}
+            height={"89"}
             src="./timeLinePointUp.svg"
             alt="Time line point up"
             className="timeLinePointUp"
@@ -55,7 +62,9 @@ const Education = () => {
           </div>
         </div>
         <div className={styles.education}>
-          <img
+          <Image
+            width={"39"}
+            height={"89"}
             src="./timeLinePointUp.svg"
             alt="Time line point up"
             className="timeLinePointUp"
@@ -69,7 +78,9 @@ const Education = () => {
           </div>
         </div>
         <div className={styles.education}>
-          <img
+          <Image
+            width={"39"}
+            height={"89"}
             src="./timeLinePointUp.svg"
             alt="Time line point up"
             className="timeLinePointUp"
