@@ -9,8 +9,9 @@ const messages = [
     height={"100"}
     key={1}
     className={styles.gif}
-    src="./cat.gif"
+    src="/cat.gif"
     alt="Cat GIF"
+    unoptimized
   />,
   <div key={2}>
     I’m <span className={styles.spanBold}>Rossella Filocomo</span>, a software
@@ -46,9 +47,6 @@ const TypingIndicator: React.FC = () => {
 const ChatContent: React.FC = () => {
   const [emailBody, setEmailBody] = useState<string>("");
 
-  const [visibleMessages, setVisibleMessages] = useState<React.JSX.Element[]>(
-    []
-  );
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
 
   const [isTyping, setIsTyping] = useState(false);
@@ -70,12 +68,7 @@ const ChatContent: React.FC = () => {
   };
 
   const loadStateFromLocalStorage = () => {
-    const storedMessages = localStorage.getItem("visibleMessages");
     const storedIndex = localStorage.getItem("currentMessageIndex");
-
-    if (storedMessages) {
-      setVisibleMessages(JSON.parse(storedMessages));
-    }
     if (storedIndex) {
       setCurrentMessageIndex(JSON.parse(storedIndex));
     }
@@ -94,10 +87,6 @@ const ChatContent: React.FC = () => {
           setIsTyping(false);
 
           const messageTimeoutId = setTimeout(() => {
-            setVisibleMessages((prevMessages) => [
-              ...prevMessages,
-              messages[currentMessageIndex],
-            ]);
             setCurrentMessageIndex((prevIndex) => prevIndex + 1);
           }, 1000);
 
@@ -114,12 +103,11 @@ const ChatContent: React.FC = () => {
   }, [currentMessageIndex]);
 
   useEffect(() => {
-    localStorage.setItem("visibleMessages", JSON.stringify(visibleMessages));
     localStorage.setItem(
       "currentMessageIndex",
       JSON.stringify(currentMessageIndex)
     );
-  }, [visibleMessages, currentMessageIndex]);
+  }, [currentMessageIndex]);
 
   return (
     <div className={`container ${styles.container}`}>
@@ -128,15 +116,17 @@ const ChatContent: React.FC = () => {
           width={"200"}
           height={"200"}
           className={styles.image}
-          src="./picture.png"
+          src="/picture.png"
           alt="picture"
         />
       </div>
-      <div className="chat-container">
+      <div className="chatContainer">
         <div className={styles.messageWrapper}>
-          {visibleMessages.map((message, index) => (
-            <ChatMessage key={index} message={message} />
-          ))}
+          {messages
+            .filter((m) => Number(m.key) < currentMessageIndex)
+            .map((m) => (
+              <ChatMessage key={m.key} message={m}></ChatMessage>
+            ))}
         </div>
         {isTyping && <TypingIndicator />}
         <div className={styles.inputWrapper}>
