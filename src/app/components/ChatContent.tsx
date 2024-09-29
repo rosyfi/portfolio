@@ -9,7 +9,7 @@ const messages = [
     height={"100"}
     key={1}
     className={styles.gif}
-    src="/cat.gif"
+    src="./cat.gif"
     alt="Cat GIF"
     unoptimized
   />,
@@ -116,7 +116,7 @@ const ChatContent: React.FC = () => {
           width={"200"}
           height={"200"}
           className={styles.image}
-          src="/picture.png"
+          src="./picture.png"
           alt="picture"
         />
       </div>
