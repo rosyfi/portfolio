@@ -5,7 +5,7 @@ const Resume = () => {
   return (
     <div className={styles.container}>
       <iframe src="/pdf/Rossella_Filocomo_CV.pdf" width="100%" height="600px" />
-      <a href="/pdf/Rossella_Filocomo_CV.pdf" download>
+      <a href="/pdf/CV_Rossella_Filocomo.pdf" download>
         <button className={styles.button}>
           <i className="bi bi-download"> Download Rossella{"'"}s CV (127 KB)</i>
         </button>

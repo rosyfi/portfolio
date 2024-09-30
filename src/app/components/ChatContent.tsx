@@ -56,7 +56,7 @@ const ChatContent: React.FC = () => {
   };
 
   const openEmail = () => {
-    const recipient = "filocomo.rossella@gmail.com";
+    const recipient = "filocomo.career@gmail.com";
     const subject = "Joyn us!";
     const body = encodeURIComponent(emailBody);
 
