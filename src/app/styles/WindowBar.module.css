@@ -11,4 +11,8 @@
 
 .windowBarLink {
   font-weight: 600;
+  width: 200px; /* Fixed width of the container */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide any overflowing content */
+  text-overflow: ellipsis;
 }
