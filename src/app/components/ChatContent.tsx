@@ -18,9 +18,9 @@ const messages = [
     developer.
   </div>,
   <div key={3}>
-    Thanks for stopping by my site! On the right side you can look at my
-    website. Just click on &quot;My Page&quot; and you will see my education,
-    expierences and skills.
+    Thanks for stopping by my site! On the right side or on the bottom, if your
+    are on the phone right now, you can look at my website. Just click on
+    &quot;My Page&quot; and you will see my education, expierences and skills.
   </div>,
   <div key={4}>
     If you have any questions or want to discuss opportunities, feel free to

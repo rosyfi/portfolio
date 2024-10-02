@@ -8,9 +8,8 @@
 
 .windowsContainer {
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 3fr 1fr; /* 3/4 and 1/4 for larger screens */
   gap: inherit;
-  overflow: hidden;
 }
 
 .shortcutContainer {
@@ -24,4 +23,21 @@
   flex-direction: column;
   gap: 30px;
   padding-top: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* 3/4 and 1/4 for larger screens */
+  gap: 10px; /* Space between containers */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  .windowsContainer {
+    grid-template-columns: 1fr; /* Full width for both containers */
+  }
+  .websitesShortcutContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
