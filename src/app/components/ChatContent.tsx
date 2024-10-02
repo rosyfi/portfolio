@@ -67,6 +67,12 @@ const ChatContent: React.FC = () => {
     window.open(mailtoUrl);
   };
 
+  const handleEnterPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      openEmail();
+    }
+  };
+
   const loadStateFromLocalStorage = () => {
     const storedIndex = localStorage.getItem("currentMessageIndex");
     if (storedIndex) {
@@ -136,6 +142,7 @@ const ChatContent: React.FC = () => {
             value={emailBody}
             onChange={handleInputChange}
             placeholder="Write me your message.."
+            onKeyDown={(e) => handleEnterPress(e)}
           />
           <button className={styles.enterButton} onClick={openEmail}>
             <Image
