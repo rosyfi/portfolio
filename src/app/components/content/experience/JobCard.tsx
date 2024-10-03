@@ -32,7 +32,7 @@ const JobCard: React.FC<JobCardProps> = ({
         <Image
           width={"100"}
           height={"100"}
-          src={`/logo/${logo}.png`}
+          src={"/" + `/logo/${logo}.png`}
           alt={logo}
           className={styles.logo}
         />
