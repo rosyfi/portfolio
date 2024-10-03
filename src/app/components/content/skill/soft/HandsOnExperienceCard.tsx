@@ -64,7 +64,7 @@ const HandsOnExperienceCard: React.FC<HandsOnExperienceCardProps> = ({
               width={"87"}
               height={"65"}
               className={styles.placeSymbol}
-              src={`/${svg}.svg`}
+              src={"/" + `${svg}.svg`}
               alt={`${svg}`}
             />
             <span>{place}</span>
