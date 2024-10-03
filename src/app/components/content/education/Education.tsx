@@ -24,7 +24,7 @@ const Education = () => {
               <Image
                 width={39}
                 height={39}
-                src="/timeLinePointUp.svg"
+                src="./timeLinePointUp.svg"
                 alt="timeLinePointUp"
               />
             </React.Fragment>
@@ -37,7 +37,7 @@ const Education = () => {
             key={index}
             width={"40"}
             height={"12"}
-            src="/educationTimeLine.svg"
+            src="./educationTimeLine.svg"
             alt="educationTimeLine"
             className={styles.timeLineDot}
           />
@@ -50,7 +50,7 @@ const Education = () => {
               <Image
                 width={39}
                 height={39}
-                src="/timeLinePointDown.svg"
+                src="./timeLinePointDown.svg"
                 alt="timeLinePointDown"
               />
               <EducationCard
