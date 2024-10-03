@@ -25,7 +25,7 @@ const DesktopShortcut: React.FC<DesktopShortcutProp> = ({
               width={"100"}
               height={"100"}
               className={styles.logo}
-              src={`${logo}.svg`}
+              src={`/${logo}.svg`}
               alt={logo}
             />
             <i className="bi bi-box-arrow-up-right">{name}</i>
@@ -43,7 +43,7 @@ const DesktopShortcut: React.FC<DesktopShortcutProp> = ({
               width={"100"}
               height={"100"}
               className={styles.logo}
-              src={`${logo}.svg`}
+              src={`/${logo}.svg`}
               alt={logo}
             />
             <span>{name}</span>

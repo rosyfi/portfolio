@@ -14,7 +14,7 @@ const WindowBar: React.FC<WindowBarProps> = ({ path }) => {
           <Image
             width={"89"}
             height={"23"}
-            src="./windowBarButtons.svg"
+            src="/windowBarButtons.svg"
             alt="Window bar buttons"
             className="windowBarButtons"
           />

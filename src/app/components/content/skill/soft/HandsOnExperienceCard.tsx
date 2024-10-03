@@ -32,7 +32,7 @@ const HandsOnExperienceCard: React.FC<HandsOnExperienceCardProps> = ({
           width={"19"}
           height={"34"}
           className={styles.svg}
-          src="arrowLeft.svg"
+          src="/arrowLeft.svg"
           alt="arrowLeft"
         />
       </button>
@@ -64,7 +64,7 @@ const HandsOnExperienceCard: React.FC<HandsOnExperienceCardProps> = ({
               width={"87"}
               height={"65"}
               className={styles.placeSymbol}
-              src={`${svg}.svg`}
+              src={`/${svg}.svg`}
               alt={`${svg}`}
             />
             <span>{place}</span>
@@ -77,7 +77,7 @@ const HandsOnExperienceCard: React.FC<HandsOnExperienceCardProps> = ({
           width={"19"}
           height={"34"}
           className={styles.svg}
-          src="arrowRight.svg"
+          src="/arrowRight.svg"
           alt="arrowRight"
         />
       </button>
