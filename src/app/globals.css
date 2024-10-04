@@ -61,9 +61,3 @@ p {
     text-wrap: balance;
   }
 }
-
-@media (max-width: 768px) {
-  h2 {
-    font-size: xx-small;
-  }
-}

@@ -16,13 +16,13 @@ const EducationCard: React.FC<EducationCardProps> = ({
   time,
 }) => {
   return (
-    <div className={`container ${styles.container}`}>
+    <div className={styles.container}>
       <h2 className="degree">{degree}</h2>
-      <span className="place" style={{ fontStyle: "italic" }}>
+      <p className="place" style={{ fontStyle: "italic" }}>
         {school}
         <br />
         {location}
-      </span>
+      </p>
       <h5 className={styles.time}>{time}</h5>
     </div>
   );
