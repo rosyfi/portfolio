@@ -17,7 +17,8 @@
   justify-content: space-around;
 }
 
-.education {
+.educationUpper,
+.educationLower {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,11 +37,19 @@
     flex-direction: row;
     justify-content: left;
   }
-  .education {
+  .educationUpper,
+  .educationLower {
     flex-direction: row;
   }
-  .education img {
+  .educationUpper img,
+  .educationLower img {
     transform: rotate(90deg);
+  }
+  .educationUpper {
+    text-align: end;
+  }
+  .educationLower {
+    text-align: start;
   }
   .timeLineContainer {
     flex-direction: column;

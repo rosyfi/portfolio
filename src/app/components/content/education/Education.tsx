@@ -13,7 +13,7 @@ const Education = () => {
     <div className={`container ${styles.container}`}>
       <div className={styles.educationContainerUp}>
         {upperEducation.map((e, i) => (
-          <div className={styles.education} key={i}>
+          <div className={styles.educationUpper} key={i}>
             <React.Fragment>
               <EducationCard
                 degree={e.degree}
@@ -23,7 +23,7 @@ const Education = () => {
               />
               <Image
                 width={39}
-                height={39}
+                height={49}
                 src="/timeLinePointUp.svg"
                 alt="timeLinePointUp"
               />
@@ -45,11 +45,11 @@ const Education = () => {
       </div>
       <div className={styles.educationContainerDown}>
         {lowerEducation.map((e, i) => (
-          <div className={styles.education} key={i}>
+          <div className={styles.educationLower} key={i}>
             <React.Fragment>
               <Image
                 width={39}
-                height={39}
+                height={49}
                 src="/timeLinePointDown.svg"
                 alt="timeLinePointDown"
               />

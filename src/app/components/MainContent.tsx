@@ -41,7 +41,11 @@ const MainContent: React.FC<MainContentProps> = ({
         return <SoftSkill />;
       case 6:
         onPathChange("rossellafilocomo/skills/language");
-        return <div style={{ textAlign: "center" }}>Under construction :)</div>;
+        return (
+          <div style={{ alignContent: "center" }}>
+            <div style={{ textAlign: "center" }}>Under construction :)</div>
+          </div>
+        );
       case 7:
         onPathChange("rossellafilocomo/resume");
         return <Resume />;
