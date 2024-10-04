@@ -1,0 +1,19 @@
+.container p {
+  font-size: medium;
+  margin-bottom: 0;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  .container h2 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .container p {
+    font-size: smaller;
+  }
+
+  .container h5 {
+    font-size: small;
+  }
+}
