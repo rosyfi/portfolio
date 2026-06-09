@@ -242,7 +242,7 @@ const About = () => {
               <h3>Bugly</h3>
               <div className={styles.projectImageWrapper}>
                 <Image
-                  src="/projects/bugly.png"
+                  src="/projects/bugly/bugly.png"
                   alt="Bugly app screenshot"
                   className={styles.projectImage}
                   width={600}
@@ -259,10 +259,14 @@ const About = () => {
               </Link>
             </div>
             <div className={styles.projectCard}>
-              <h3>PackMe</h3>
-              <div className={styles.projectImagePlaceholderWip}>
-                <i className="bi bi-suitcase-lg" />
-                <span>Work in progress</span>
+              <h3>Carry</h3>
+              <div className={styles.carryMiniHero}>
+                <div className={`${styles.carryPhone} ${styles.carryPhoneSide}`}>
+                  <Image src="/projects/carry/Small_Hero_1.png" alt="Carry screen 1" fill style={{ objectFit: "contain", objectPosition: "top center" }} />
+                </div>
+                <div className={`${styles.carryPhone} ${styles.carryPhoneCenter}`}>
+                  <Image src="/projects/carry/Small_Hero_2.png" alt="Carry screen 2" fill style={{ objectFit: "contain", objectPosition: "top center" }} />
+                </div>
               </div>
               <p>
                 Smart packing app that lets users create personalized packing

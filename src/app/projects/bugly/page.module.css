@@ -355,7 +355,8 @@
 }
 
 .journeyTable {
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   min-width: 900px;
   font-size: 13px;
   background: var(--surface);

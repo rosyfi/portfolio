@@ -102,10 +102,13 @@ RECIPIENT_EMAIL=...
 - Light / dark theme — full site, including SVG swaps
 - Mobile responsive — hamburger nav, stacked hero layout
 - Bugly project detail page (`/projects/bugly`) — 10-section case study layout (hero, info, problem, research, quote, persona, journey map, lofi/hifi, accessibility, impact)
+- PackMe project detail page (`/projects/packme`) — same 10-section template; full Martina persona, 6-stage journey map, 4 pain-point cards; hero image, LoFi/HiFi slides, and some copy fields are placeholder/TBD pending final content
 
 ### Not done / next up
 
-- PackMe project page (same template structure as Bugly, different content)
+- PackMe: hero image (replace placeholder with actual mockup)
+- PackMe: LoFi/HiFi wireframe images + slide descriptions
+- PackMe: fill in Role details, prototype URL, and any remaining "TBD" copy
 - More projects to add as work is completed (PackMe when ready)
 - Deployment + domain setup
 - SEO metadata (only placeholder description in `layout.tsx`)

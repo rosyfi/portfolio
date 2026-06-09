@@ -13,8 +13,8 @@ const slides: {
 }[] = [
   {
     label: "Home Screen",
-    lofi: "/projects/Home_LoFi.png",
-    hifi: "/projects/Home_HiFi.png",
+    lofi: "/projects/bugly/Home_LoFi.png",
+    hifi: "/projects/bugly/Home_HiFi.png",
     lofiDescription: (
       <>
         I designed the home screen to give users an{" "}
@@ -36,8 +36,8 @@ const slides: {
   },
   {
     label: "Report Bug Screen",
-    lofi: "/projects/Report_Bug_LoFi.png",
-    hifi: "/projects/Report_Bug_HiFi.png",
+    lofi: "/projects/bugly/Report_Bug_LoFi.png",
+    hifi: "/projects/bugly/Report_Bug_HiFi.png",
     lofiDescription: (
       <>
         I structured the report form to guide users{" "}
@@ -60,8 +60,8 @@ const slides: {
   },
   {
     label: "Bug Detail Screen",
-    lofi: "/projects/Bug_Detail_LoFi.png",
-    hifi: "/projects/Bug_Detail_HiFi.png",
+    lofi: "/projects/bugly/Bug_Detail_LoFi.png",
+    hifi: "/projects/bugly/Bug_Detail_HiFi.png",
     lofiDescription: (
       <>
         Key elements such as{" "}
@@ -83,8 +83,8 @@ const slides: {
   },
   {
     label: "Chat Screen",
-    lofi: "/projects/Chat_LoFi.png",
-    hifi: "/projects/Chat_HiFi.png",
+    lofi: "/projects/bugly/Chat_LoFi.png",
+    hifi: "/projects/bugly/Chat_HiFi.png",
     lofiDescription: (
       <>
         I designed the chat interface to enable{" "}
@@ -154,7 +154,7 @@ export default function BuglyPage() {
       <section className={styles.hero}>
         <div className={styles.heroImageWrap}>
           <Image
-            src="/projects/bugly_hero.png"
+            src="/projects/bugly/bugly_hero.png"
             alt="Bugly project mockup"
             fill
             style={{ objectFit: "contain" }}
@@ -291,7 +291,7 @@ export default function BuglyPage() {
       <section className={styles.persona}>
         <div className={styles.personaCard}>
           <Image
-            src="/projects/Tina.avif"
+            src="/projects/bugly/Tina.avif"
             alt="Persona: Tina"
             width={120}
             height={120}
