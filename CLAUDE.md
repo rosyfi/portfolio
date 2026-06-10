@@ -120,6 +120,10 @@ RECIPIENT_EMAIL=...
 
 Update the **Current state** section of this file whenever you complete something noteworthy — a new section built, a feature wired end-to-end, a page added, a bug fixed that changed the architecture, or anything that would mislead a future session if left stale. Move finished items into "Done" and add new "Not done" items as they emerge. You do not need to ask the user first; just update the file as part of wrapping up the task.
 
+## Footer date
+
+`src/app/components/Footer.tsx` contains a "Last updated: Month YYYY" string. **Every time you push to main, update this to the current month and year before committing.**
+
 ---
 
 ## Development
