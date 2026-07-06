@@ -4,14 +4,14 @@ const isCI = process.env.GITHUB_ACTIONS === "true";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: isCI ? "/mywebsite" : "",
-  assetPrefix: isCI ? "/mywebsite/" : "",
+  basePath: isCI ? "/portfolio" : "",
+  assetPrefix: isCI ? "/portfolio/" : "",
   images: {
     loader: "custom",
     loaderFile: "./src/imageLoader.ts",
   },
   env: {
-    NEXT_PUBLIC_BASE_PATH: isCI ? "/mywebsite" : "",
+    NEXT_PUBLIC_BASE_PATH: isCI ? "/portfolio" : "",
   },
 };
 
